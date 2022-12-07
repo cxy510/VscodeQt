@@ -1,0 +1,4 @@
+E:/Project/ProjectGlory/build/CMakeFiles/ProjectGlory.dir
+E:/Project/ProjectGlory/build/CMakeFiles/edit_cache.dir
+E:/Project/ProjectGlory/build/CMakeFiles/rebuild_cache.dir
+E:/Project/ProjectGlory/build/CMakeFiles/ProjectGlory_autogen.dir

@@ -1,0 +1,3 @@
+"E:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\ProjectGlory.dir/objects.a
+E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\ar.exe qc CMakeFiles\ProjectGlory.dir/objects.a @CMakeFiles\ProjectGlory.dir\objects1.rsp
+E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\ProjectGlory.dir/objects.a -Wl,--no-whole-archive -o ProjectGlory.exe -Wl,--out-implib,libProjectGlory.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ProjectGlory.dir\linklibs.rsp

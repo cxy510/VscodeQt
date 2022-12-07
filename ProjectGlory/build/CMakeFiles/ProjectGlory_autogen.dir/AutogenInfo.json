@@ -1,0 +1,133 @@
+{
+	"BUILD_DIR" : "E:/Project/ProjectGlory/build/ProjectGlory_autogen",
+	"CMAKE_BINARY_DIR" : "E:/Project/ProjectGlory/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "E:/Project/ProjectGlory/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "E:/Project/ProjectGlory",
+	"CMAKE_EXECUTABLE" : "E:/Program Files/CMake/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"E:/Project/ProjectGlory/CMakeLists.txt",
+		"E:/Project/ProjectGlory/build/CMakeFiles/3.23.0-rc3/CMakeSystem.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake",
+		"E:/Project/ProjectGlory/build/CMakeFiles/3.23.0-rc3/CMakeCXXCompiler.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeGenericSystem.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeCXXInformation.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/Compiler/GNU.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake",
+		"E:/Project/ProjectGlory/build/CMakeFiles/3.23.0-rc3/CMakeRCCompiler.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeRCInformation.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows-windres.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5/Qt5Config.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core/Qt5CoreMacros.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeParseArguments.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeParseArguments.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"E:/Project/ProjectGlory/qrc/MyResource.qrc"
+	],
+	"CMAKE_SOURCE_DIR" : "E:/Project/ProjectGlory",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"E:/Project/ProjectGlory/include/mainwindow.h",
+			"Mu",
+			"6YEA5652QU/moc_mainwindow.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "E:/Project/ProjectGlory/build/ProjectGlory_autogen/include",
+	"MOC_COMPILATION_FILE" : "E:/Project/ProjectGlory/build/ProjectGlory_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"E:/Project/ProjectGlory/build",
+		"E:/Project/ProjectGlory",
+		"E:/Project/ProjectGlory/include",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtANGLE",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore",
+		"E:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/win32-g++",
+		"E:/Qt/Qt5.9.9/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include",
+		"E:/Qt/Qt5.9.9/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed",
+		"E:/Qt/Qt5.9.9/Tools/mingw530_32/i686-w64-mingw32/include",
+		"E:/Qt/Qt5.9.9/Tools/mingw530_32/i686-w64-mingw32/include/c++",
+		"E:/Qt/Qt5.9.9/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32",
+		"E:/Qt/Qt5.9.9/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"E:/Qt/Qt5.9.9/Tools/mingw530_32/bin/g++.exe",
+		"-dM",
+		"-E",
+		"-c",
+		"E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "E:/Project/ProjectGlory/build/ProjectGlory_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [ "E:/Project/ProjectGlory/build/ui_mainwindow.h" ],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 1,
+	"PARSE_CACHE_FILE" : "E:/Project/ProjectGlory/build/CMakeFiles/ProjectGlory_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "E:/Qt/Qt5.9.9/5.9.9/mingw53_32/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 9,
+	"SETTINGS_FILE" : "E:/Project/ProjectGlory/build/CMakeFiles/ProjectGlory_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "E:/Project/ProjectGlory/main.cpp", "Mu", null ],
+		[ "E:/Project/ProjectGlory/source/mainwindow.cpp", "Mu", null ]
+	],
+	"VERBOSITY" : 0
+}
