@@ -36,5 +36,5 @@ ADD_EXECUTABLE(ProjectGlory
 )
 
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
-
+#test branch_20221209
 target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui) 
