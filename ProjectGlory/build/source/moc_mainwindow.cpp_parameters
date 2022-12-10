@@ -1,0 +1,7 @@
+-IE:/Project/ProjectGlory/build
+-IE:/Project/ProjectGlory
+-IE:/Project/ProjectGlory/build
+-DWIN32
+-o
+E:/Project/ProjectGlory/build/source/moc_mainwindow.cpp
+E:/Project/ProjectGlory/source/mainwindow.cpp
