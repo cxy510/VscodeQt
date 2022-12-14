@@ -1,6 +1,6 @@
 CMakeFiles/ProjectGlory.dir/main.cpp.obj: \
- E:\Project\ProjectGlory\main.cpp \
- E:/Project/ProjectGlory/include/mainwindow.h \
+ E:\GitSource\VscodeQt\ProjectGlory\main.cpp \
+ E:/GitSource/VscodeQt/ProjectGlory/include/mainwindow.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmainwindow.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \

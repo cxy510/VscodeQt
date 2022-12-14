@@ -1,7 +1,7 @@
 CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj: \
- E:\Project\ProjectGlory\build\ProjectGlory_autogen\mocs_compilation.cpp \
- E:\Project\ProjectGlory\build\ProjectGlory_autogen\6YEA5652QU/moc_mainwindow.cpp \
- E:/Project/ProjectGlory/include/mainwindow.h \
+ E:\GitSource\VscodeQt\ProjectGlory\build\ProjectGlory_autogen\mocs_compilation.cpp \
+ E:\GitSource\VscodeQt\ProjectGlory\build\ProjectGlory_autogen\6YEA5652QU/moc_mainwindow.cpp \
+ E:/GitSource/VscodeQt/ProjectGlory/include/mainwindow.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmainwindow.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \

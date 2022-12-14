@@ -1,22 +1,22 @@
 [
 {
-  "directory": "E:/Project/ProjectGlory/build",
-  "command": "E:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\ProjectGlory_autogen\\mocs_compilation.cpp.obj -c E:\\Project\\ProjectGlory\\build\\ProjectGlory_autogen\\mocs_compilation.cpp",
-  "file": "E:/Project/ProjectGlory/build/ProjectGlory_autogen/mocs_compilation.cpp"
+  "directory": "E:/GitSource/VscodeQt/ProjectGlory/build",
+  "command": "E:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\ProjectGlory_autogen\\mocs_compilation.cpp.obj -c E:\\GitSource\\VscodeQt\\ProjectGlory\\build\\ProjectGlory_autogen\\mocs_compilation.cpp",
+  "file": "E:/GitSource/VscodeQt/ProjectGlory/build/ProjectGlory_autogen/mocs_compilation.cpp"
 },
 {
-  "directory": "E:/Project/ProjectGlory/build",
-  "command": "E:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\main.cpp.obj -c E:\\Project\\ProjectGlory\\main.cpp",
-  "file": "E:/Project/ProjectGlory/main.cpp"
+  "directory": "E:/GitSource/VscodeQt/ProjectGlory/build",
+  "command": "E:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\main.cpp.obj -c E:\\GitSource\\VscodeQt\\ProjectGlory\\main.cpp",
+  "file": "E:/GitSource/VscodeQt/ProjectGlory/main.cpp"
 },
 {
-  "directory": "E:/Project/ProjectGlory/build",
-  "command": "E:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\source\\mainwindow.cpp.obj -c E:\\Project\\ProjectGlory\\source\\mainwindow.cpp",
-  "file": "E:/Project/ProjectGlory/source/mainwindow.cpp"
+  "directory": "E:/GitSource/VscodeQt/ProjectGlory/build",
+  "command": "E:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\source\\mainwindow.cpp.obj -c E:\\GitSource\\VscodeQt\\ProjectGlory\\source\\mainwindow.cpp",
+  "file": "E:/GitSource/VscodeQt/ProjectGlory/source/mainwindow.cpp"
 },
 {
-  "directory": "E:/Project/ProjectGlory/build",
-  "command": "E:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\qrc_MyResource.cpp.obj -c E:\\Project\\ProjectGlory\\build\\qrc_MyResource.cpp",
-  "file": "E:/Project/ProjectGlory/build/qrc_MyResource.cpp"
+  "directory": "E:/GitSource/VscodeQt/ProjectGlory/build",
+  "command": "E:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\qrc_MyResource.cpp.obj -c E:\\GitSource\\VscodeQt\\ProjectGlory\\build\\qrc_MyResource.cpp",
+  "file": "E:/GitSource/VscodeQt/ProjectGlory/build/qrc_MyResource.cpp"
 }
 ]

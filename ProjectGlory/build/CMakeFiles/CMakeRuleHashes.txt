@@ -1,6 +1,6 @@
 # Hashes of file build rules.
-334832d818c70e8a79e3ae66a2405f65 CMakeFiles/ProjectGlory_autogen
+c7b26e41626a51e0b01bad41046d8468 CMakeFiles/ProjectGlory_autogen
 05183a2c1a150077c738998a82c2606c include/moc_mainwindow.cpp
-93ba0039437682692b3c746960d9599d qrc_MyResource.cpp
+0fdfae90ac77a548c4f66bec81e84eaf qrc_MyResource.cpp
 39ee0865c8df9e100baed47898cd03fd source/moc_mainwindow.cpp
-72c8f5731da9d42867c4430aef507507 ui_mainwindow.h
+2d23281eb6c536fbac9fa5b6c8fb9ea8 ui_mainwindow.h

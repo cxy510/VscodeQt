@@ -7,6 +7,11 @@ set(CMAKE_DEPENDS_GENERATOR "MinGW Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "../CMakeLists.txt"
+  "CMakeFiles/3.23.0-rc3/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.23.0-rc3/CMakeRCCompiler.cmake"
+  "CMakeFiles/3.23.0-rc3/CMakeSystem.cmake"
+  "../qrc/MyResource.qrc"
   "E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeCXXInformation.cmake"
   "E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake"
   "E:/Program Files/CMake/share/cmake-3.23/Modules/CMakeGenericSystem.cmake"
@@ -25,11 +30,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "E:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows-windres.cmake"
   "E:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows.cmake"
   "E:/Program Files/CMake/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake"
-  "../CMakeLists.txt"
-  "CMakeFiles/3.23.0-rc3/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.23.0-rc3/CMakeRCCompiler.cmake"
-  "CMakeFiles/3.23.0-rc3/CMakeSystem.cmake"
-  "../qrc/MyResource.qrc"
   "E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5/Qt5Config.cmake"
   "E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5/Qt5ConfigVersion.cmake"
   "E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5/Qt5ModuleLocation.cmake"

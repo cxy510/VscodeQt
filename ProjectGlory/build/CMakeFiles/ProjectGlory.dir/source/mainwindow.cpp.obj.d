@@ -1,6 +1,6 @@
 CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj: \
- E:\Project\ProjectGlory\source\mainwindow.cpp \
- E:/Project/ProjectGlory/include/mainwindow.h \
+ E:\GitSource\VscodeQt\ProjectGlory\source\mainwindow.cpp \
+ E:/GitSource/VscodeQt/ProjectGlory/include/mainwindow.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmainwindow.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtwidgetsglobal.h \
@@ -306,7 +306,7 @@ CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj: \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qkeysequence.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtabwidget.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui/qicon.h \
- E:/Project/ProjectGlory/build/ui_mainwindow.h \
+ E:/GitSource/VscodeQt/ProjectGlory/build/ui_mainwindow.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/QVariant \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qvariant.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore/qmap.h \
@@ -345,6 +345,8 @@ CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj: \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qstyle.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qtabbar.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qrubberband.h \
+ E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QLabel \
+ E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qlabel.h \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMainWindow \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/QMenuBar \
  E:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets/qmenubar.h \

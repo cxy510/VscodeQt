@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "E:/Project/ProjectGlory/build/ProjectGlory_autogen/mocs_compilation.cpp" "CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj.d"
-  "E:/Project/ProjectGlory/main.cpp" "CMakeFiles/ProjectGlory.dir/main.cpp.obj" "gcc" "CMakeFiles/ProjectGlory.dir/main.cpp.obj.d"
-  "E:/Project/ProjectGlory/build/qrc_MyResource.cpp" "CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.obj" "gcc" "CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.obj.d"
-  "E:/Project/ProjectGlory/source/mainwindow.cpp" "CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj" "gcc" "CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj.d"
+  "E:/GitSource/VscodeQt/ProjectGlory/build/ProjectGlory_autogen/mocs_compilation.cpp" "CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj.d"
+  "E:/GitSource/VscodeQt/ProjectGlory/main.cpp" "CMakeFiles/ProjectGlory.dir/main.cpp.obj" "gcc" "CMakeFiles/ProjectGlory.dir/main.cpp.obj.d"
+  "E:/GitSource/VscodeQt/ProjectGlory/build/qrc_MyResource.cpp" "CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.obj" "gcc" "CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.obj.d"
+  "E:/GitSource/VscodeQt/ProjectGlory/source/mainwindow.cpp" "CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj" "gcc" "CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj.d"
   )
 
 # Targets to which this target links.

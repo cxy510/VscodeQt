@@ -52,10 +52,10 @@ RM = "E:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Project\ProjectGlory
+CMAKE_SOURCE_DIR = E:\GitSource\VscodeQt\ProjectGlory
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\Project\ProjectGlory\build
+CMAKE_BINARY_DIR = E:\GitSource\VscodeQt\ProjectGlory\build
 
 # Utility rule file for ProjectGlory_autogen.
 
@@ -66,8 +66,8 @@ include CMakeFiles/ProjectGlory_autogen.dir/compiler_depend.make
 include CMakeFiles/ProjectGlory_autogen.dir/progress.make
 
 CMakeFiles/ProjectGlory_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=E:\Project\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target ProjectGlory"
-	"E:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen E:/Project/ProjectGlory/build/CMakeFiles/ProjectGlory_autogen.dir/AutogenInfo.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=E:\GitSource\VscodeQt\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target ProjectGlory"
+	"E:\Program Files\CMake\bin\cmake.exe" -E cmake_autogen E:/GitSource/VscodeQt/ProjectGlory/build/CMakeFiles/ProjectGlory_autogen.dir/AutogenInfo.json Debug
 
 ProjectGlory_autogen: CMakeFiles/ProjectGlory_autogen
 ProjectGlory_autogen: CMakeFiles/ProjectGlory_autogen.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ProjectGlory_autogen.dir/clean:
 .PHONY : CMakeFiles/ProjectGlory_autogen.dir/clean
 
 CMakeFiles/ProjectGlory_autogen.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\Project\ProjectGlory E:\Project\ProjectGlory E:\Project\ProjectGlory\build E:\Project\ProjectGlory\build E:\Project\ProjectGlory\build\CMakeFiles\ProjectGlory_autogen.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\GitSource\VscodeQt\ProjectGlory E:\GitSource\VscodeQt\ProjectGlory E:\GitSource\VscodeQt\ProjectGlory\build E:\GitSource\VscodeQt\ProjectGlory\build E:\GitSource\VscodeQt\ProjectGlory\build\CMakeFiles\ProjectGlory_autogen.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ProjectGlory_autogen.dir/depend
 

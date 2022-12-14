@@ -52,10 +52,10 @@ RM = "E:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Project\ProjectGlory
+CMAKE_SOURCE_DIR = E:\GitSource\VscodeQt\ProjectGlory
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\Project\ProjectGlory\build
+CMAKE_BINARY_DIR = E:\GitSource\VscodeQt\ProjectGlory\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ProjectGlory.dir/depend.make
@@ -69,76 +69,76 @@ include CMakeFiles/ProjectGlory.dir/progress.make
 include CMakeFiles/ProjectGlory.dir/flags.make
 
 ui_mainwindow.h: ../ui/mainwindow.ui
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=E:\Project\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ui_mainwindow.h"
-	E:\Qt\Qt5.9.9\5.9.9\mingw53_32\bin\uic.exe -o E:/Project/ProjectGlory/build/ui_mainwindow.h E:/Project/ProjectGlory/ui/mainwindow.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=E:\GitSource\VscodeQt\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ui_mainwindow.h"
+	E:\Qt\Qt5.9.9\5.9.9\mingw53_32\bin\uic.exe -o E:/GitSource/VscodeQt/ProjectGlory/build/ui_mainwindow.h E:/GitSource/VscodeQt/ProjectGlory/ui/mainwindow.ui
 
 qrc_MyResource.cpp: ../qrc/MyResource.qrc
 qrc_MyResource.cpp: ../qrc/resources/choose.png
 qrc_MyResource.cpp: ../qrc/resources/duoxuan.png
 qrc_MyResource.cpp: ../qrc/resources/ico.jpg
 qrc_MyResource.cpp: ../qrc/resources/space_selected.png
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=E:\Project\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating qrc_MyResource.cpp"
-	E:\Qt\Qt5.9.9\5.9.9\mingw53_32\bin\rcc.exe --name MyResource --output E:/Project/ProjectGlory/build/qrc_MyResource.cpp E:/Project/ProjectGlory/qrc/MyResource.qrc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=E:\GitSource\VscodeQt\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating qrc_MyResource.cpp"
+	E:\Qt\Qt5.9.9\5.9.9\mingw53_32\bin\rcc.exe --name MyResource --output E:/GitSource/VscodeQt/ProjectGlory/build/qrc_MyResource.cpp E:/GitSource/VscodeQt/ProjectGlory/qrc/MyResource.qrc
 
 CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj: CMakeFiles/ProjectGlory.dir/flags.make
 CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj: CMakeFiles/ProjectGlory.dir/includes_CXX.rsp
 CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj: ProjectGlory_autogen/mocs_compilation.cpp
 CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj: CMakeFiles/ProjectGlory.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Project\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj"
-	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\ProjectGlory.dir\ProjectGlory_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\ProjectGlory.dir\ProjectGlory_autogen\mocs_compilation.cpp.obj -c E:\Project\ProjectGlory\build\ProjectGlory_autogen\mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitSource\VscodeQt\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj"
+	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\ProjectGlory.dir\ProjectGlory_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\ProjectGlory.dir\ProjectGlory_autogen\mocs_compilation.cpp.obj -c E:\GitSource\VscodeQt\ProjectGlory\build\ProjectGlory_autogen\mocs_compilation.cpp
 
 CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.i"
-	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Project\ProjectGlory\build\ProjectGlory_autogen\mocs_compilation.cpp > CMakeFiles\ProjectGlory.dir\ProjectGlory_autogen\mocs_compilation.cpp.i
+	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\GitSource\VscodeQt\ProjectGlory\build\ProjectGlory_autogen\mocs_compilation.cpp > CMakeFiles\ProjectGlory.dir\ProjectGlory_autogen\mocs_compilation.cpp.i
 
 CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjectGlory.dir/ProjectGlory_autogen/mocs_compilation.cpp.s"
-	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Project\ProjectGlory\build\ProjectGlory_autogen\mocs_compilation.cpp -o CMakeFiles\ProjectGlory.dir\ProjectGlory_autogen\mocs_compilation.cpp.s
+	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\GitSource\VscodeQt\ProjectGlory\build\ProjectGlory_autogen\mocs_compilation.cpp -o CMakeFiles\ProjectGlory.dir\ProjectGlory_autogen\mocs_compilation.cpp.s
 
 CMakeFiles/ProjectGlory.dir/main.cpp.obj: CMakeFiles/ProjectGlory.dir/flags.make
 CMakeFiles/ProjectGlory.dir/main.cpp.obj: CMakeFiles/ProjectGlory.dir/includes_CXX.rsp
 CMakeFiles/ProjectGlory.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/ProjectGlory.dir/main.cpp.obj: CMakeFiles/ProjectGlory.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Project\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ProjectGlory.dir/main.cpp.obj"
-	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectGlory.dir/main.cpp.obj -MF CMakeFiles\ProjectGlory.dir\main.cpp.obj.d -o CMakeFiles\ProjectGlory.dir\main.cpp.obj -c E:\Project\ProjectGlory\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitSource\VscodeQt\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ProjectGlory.dir/main.cpp.obj"
+	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectGlory.dir/main.cpp.obj -MF CMakeFiles\ProjectGlory.dir\main.cpp.obj.d -o CMakeFiles\ProjectGlory.dir\main.cpp.obj -c E:\GitSource\VscodeQt\ProjectGlory\main.cpp
 
 CMakeFiles/ProjectGlory.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjectGlory.dir/main.cpp.i"
-	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Project\ProjectGlory\main.cpp > CMakeFiles\ProjectGlory.dir\main.cpp.i
+	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\GitSource\VscodeQt\ProjectGlory\main.cpp > CMakeFiles\ProjectGlory.dir\main.cpp.i
 
 CMakeFiles/ProjectGlory.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjectGlory.dir/main.cpp.s"
-	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Project\ProjectGlory\main.cpp -o CMakeFiles\ProjectGlory.dir\main.cpp.s
+	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\GitSource\VscodeQt\ProjectGlory\main.cpp -o CMakeFiles\ProjectGlory.dir\main.cpp.s
 
 CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj: CMakeFiles/ProjectGlory.dir/flags.make
 CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj: CMakeFiles/ProjectGlory.dir/includes_CXX.rsp
 CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj: ../source/mainwindow.cpp
 CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj: CMakeFiles/ProjectGlory.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Project\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj"
-	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj -MF CMakeFiles\ProjectGlory.dir\source\mainwindow.cpp.obj.d -o CMakeFiles\ProjectGlory.dir\source\mainwindow.cpp.obj -c E:\Project\ProjectGlory\source\mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitSource\VscodeQt\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj"
+	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.obj -MF CMakeFiles\ProjectGlory.dir\source\mainwindow.cpp.obj.d -o CMakeFiles\ProjectGlory.dir\source\mainwindow.cpp.obj -c E:\GitSource\VscodeQt\ProjectGlory\source\mainwindow.cpp
 
 CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.i"
-	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Project\ProjectGlory\source\mainwindow.cpp > CMakeFiles\ProjectGlory.dir\source\mainwindow.cpp.i
+	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\GitSource\VscodeQt\ProjectGlory\source\mainwindow.cpp > CMakeFiles\ProjectGlory.dir\source\mainwindow.cpp.i
 
 CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjectGlory.dir/source/mainwindow.cpp.s"
-	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Project\ProjectGlory\source\mainwindow.cpp -o CMakeFiles\ProjectGlory.dir\source\mainwindow.cpp.s
+	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\GitSource\VscodeQt\ProjectGlory\source\mainwindow.cpp -o CMakeFiles\ProjectGlory.dir\source\mainwindow.cpp.s
 
 CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.obj: CMakeFiles/ProjectGlory.dir/flags.make
 CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.obj: CMakeFiles/ProjectGlory.dir/includes_CXX.rsp
 CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.obj: qrc_MyResource.cpp
 CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.obj: CMakeFiles/ProjectGlory.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\Project\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.obj"
-	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.obj -MF CMakeFiles\ProjectGlory.dir\qrc_MyResource.cpp.obj.d -o CMakeFiles\ProjectGlory.dir\qrc_MyResource.cpp.obj -c E:\Project\ProjectGlory\build\qrc_MyResource.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=E:\GitSource\VscodeQt\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.obj"
+	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.obj -MF CMakeFiles\ProjectGlory.dir\qrc_MyResource.cpp.obj.d -o CMakeFiles\ProjectGlory.dir\qrc_MyResource.cpp.obj -c E:\GitSource\VscodeQt\ProjectGlory\build\qrc_MyResource.cpp
 
 CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.i"
-	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\Project\ProjectGlory\build\qrc_MyResource.cpp > CMakeFiles\ProjectGlory.dir\qrc_MyResource.cpp.i
+	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\GitSource\VscodeQt\ProjectGlory\build\qrc_MyResource.cpp > CMakeFiles\ProjectGlory.dir\qrc_MyResource.cpp.i
 
 CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ProjectGlory.dir/qrc_MyResource.cpp.s"
-	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\Project\ProjectGlory\build\qrc_MyResource.cpp -o CMakeFiles\ProjectGlory.dir\qrc_MyResource.cpp.s
+	E:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S E:\GitSource\VscodeQt\ProjectGlory\build\qrc_MyResource.cpp -o CMakeFiles\ProjectGlory.dir\qrc_MyResource.cpp.s
 
 # Object files for target ProjectGlory
 ProjectGlory_OBJECTS = \
@@ -161,7 +161,7 @@ ProjectGlory.exe: E:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/libQt5Cored.a
 ProjectGlory.exe: CMakeFiles/ProjectGlory.dir/linklibs.rsp
 ProjectGlory.exe: CMakeFiles/ProjectGlory.dir/objects1.rsp
 ProjectGlory.exe: CMakeFiles/ProjectGlory.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\Project\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ProjectGlory.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:\GitSource\VscodeQt\ProjectGlory\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ProjectGlory.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\ProjectGlory.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -174,6 +174,6 @@ CMakeFiles/ProjectGlory.dir/clean:
 
 CMakeFiles/ProjectGlory.dir/depend: qrc_MyResource.cpp
 CMakeFiles/ProjectGlory.dir/depend: ui_mainwindow.h
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\Project\ProjectGlory E:\Project\ProjectGlory E:\Project\ProjectGlory\build E:\Project\ProjectGlory\build E:\Project\ProjectGlory\build\CMakeFiles\ProjectGlory.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" E:\GitSource\VscodeQt\ProjectGlory E:\GitSource\VscodeQt\ProjectGlory E:\GitSource\VscodeQt\ProjectGlory\build E:\GitSource\VscodeQt\ProjectGlory\build E:\GitSource\VscodeQt\ProjectGlory\build\CMakeFiles\ProjectGlory.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ProjectGlory.dir/depend
 
