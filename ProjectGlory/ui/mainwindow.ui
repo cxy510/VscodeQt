@@ -27,7 +27,7 @@
      <string>20221214 增加调试内容</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btn_lib1">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -37,7 +37,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>20221229</string>
+     <string>lib1</string>
     </property>
    </widget>
   </widget>

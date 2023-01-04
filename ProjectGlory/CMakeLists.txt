@@ -34,7 +34,10 @@ ADD_EXECUTABLE(ProjectGlory
     ${UI_FILES_H}  
     ${QRC_FILES_CPP}     
 )
-
+# Add sub directories
+add_subdirectory(sublibrary1)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
 
 target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui) 
+target_link_libraries(ProjectGlory PRIVATE sub::lib1)
+

@@ -8,10 +8,19 @@ MyMainWindow::MyMainWindow(QWidget *parent)
 {
     ui->setupUi(this); 
     setWindowIcon(QIcon(":/resource/resources/ico.jpg"));    
-    
+    initConnect();    
 }
 MyMainWindow::~MyMainWindow()
 {
     delete ui;
 }
 
+void MyMainWindow::initConnect(){
+     connect(ui->btn_lib1,SIGNAL(clicked()),this,SLOT(slotLib1Clicked()));
+
+}
+
+void MyMainWindow::slotLib1Clicked(){
+     sublib1 hi;
+     hi.print();
+}

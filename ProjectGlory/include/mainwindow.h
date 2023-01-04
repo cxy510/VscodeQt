@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "sublib1/sublib1.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,8 +16,13 @@ class MyMainWindow : public QMainWindow
 public:
     MyMainWindow(QWidget *parent = nullptr);
     ~MyMainWindow();
-
+ 
+    
 private:
+    void initConnect();
     Ui::MainWindow *ui;
+
+private slots:
+    void slotLib1Clicked();
 };
 #endif // MAINWINDOW_H
