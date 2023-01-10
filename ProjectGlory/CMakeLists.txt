@@ -39,5 +39,7 @@ add_subdirectory(sublibrary1)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
 
 target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui) 
-target_link_libraries(ProjectGlory PRIVATE sub::lib1)
+target_link_libraries(ProjectGlory PRIVATE mylib)
 
+# 设置dll路径与执行程序在同一路径下
+SET_TARGET_PROPERTIES(mylib PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/build)
