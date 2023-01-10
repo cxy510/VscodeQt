@@ -1,4 +1,0 @@
-E:/GitSource/VscodeQt/ProjectGlory/build/CMakeFiles/ProjectGlory.dir
-E:/GitSource/VscodeQt/ProjectGlory/build/CMakeFiles/edit_cache.dir
-E:/GitSource/VscodeQt/ProjectGlory/build/CMakeFiles/rebuild_cache.dir
-E:/GitSource/VscodeQt/ProjectGlory/build/CMakeFiles/ProjectGlory_autogen.dir

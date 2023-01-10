@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/resource">
-        <file>resources/choose.png</file>
-        <file>resources/duoxuan.png</file>
-        <file>resources/ico.jpg</file>
-        <file>resources/space_selected.png</file>
-    </qresource>
-    <qresource prefix="/signal"/>
-</RCC>
