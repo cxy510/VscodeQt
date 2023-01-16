@@ -36,10 +36,15 @@ ADD_EXECUTABLE(ProjectGlory
 )
 # Add sub directories
 add_subdirectory(sublibrary1)
+add_subdirectory(subdevice)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
 
+# 导入lib库
 target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui) 
 target_link_libraries(ProjectGlory PRIVATE mylib)
+target_link_libraries(ProjectGlory PRIVATE Device)
+
 
 # 设置dll路径与执行程序在同一路径下
 SET_TARGET_PROPERTIES(mylib PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/build)
+SET_TARGET_PROPERTIES(Device PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/build)

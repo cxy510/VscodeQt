@@ -23,4 +23,6 @@ void MyMainWindow::initConnect(){
 void MyMainWindow::slotLib1Clicked(){
      sublib1 hi;
      hi.print();
+     IDevice id1;
+     id1.print();
 }

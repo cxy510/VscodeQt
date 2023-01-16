@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "sublib1.h"
+#include "device.h"
 
 
 QT_BEGIN_NAMESPACE
