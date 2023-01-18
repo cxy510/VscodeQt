@@ -8,11 +8,18 @@
 
 #ifndef __SUB_DEVICE_H__
 #define __SUB_DEVICE_H__
+//#include <QtNetwork>
+#include <QtNetwork/QTcpSocket>
 
 class IDevice
 {
 public:
-    void print();
+    IDevice(){}
+    virtual ~IDevice(){}
+    virtual void plus()=0; // 线程执行函数
+    QTcpSocket *socket=NULL;
+   // QWidget *widget=NULL;
+
 };
 
 #endif
