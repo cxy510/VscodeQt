@@ -20,10 +20,14 @@ public:
  
     
 private:
+    void initDll();
     void initConnect();
     Ui::MainWindow *ui;
+    DeviceTCPClient *device_tcp_client_;     
+   
 
 private slots:
     void slotLib1Clicked();
+    void slotConnectTcp();
 };
 #endif // MAINWINDOW_H

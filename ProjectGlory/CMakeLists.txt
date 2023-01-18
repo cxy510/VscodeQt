@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.5)
 
 project(ProjectGlory LANGUAGES CXX)
 
+#包含当前路径
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 #set(CMAKE_AUTOUIC ON) #关闭自动生成ui文件,需要指定路径
@@ -11,8 +12,13 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON) 
 
+#find_package(Qt5 COMPONENTS Widgets Gui REQUIRED)
+find_package (Qt5Core)
+find_package (Qt5Widgets)
+find_package (Qt5Gui)
 
-find_package(Qt5 COMPONENTS Widgets Gui REQUIRED)
+message(111${CMAKE_SOURCE_DIR})
+
 
 # 查找当前文件夹中的所有相关文件
 FILE(GLOB SOURCE_FILES  "source/*") 
