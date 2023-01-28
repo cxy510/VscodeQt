@@ -12,7 +12,7 @@
 #include <QtCore/QObject>
 #include <QtNetwork/QTcpSocket>
 
-//#define DllExport __declspec(dllimport)
+#define DllExport __declspec(dllimport)
 
 class IDevice
 {
@@ -32,6 +32,9 @@ class DeviceTCPClient:public IDevice
         void startDevice(QString str_ip,uint32_t int_port);
         QString getLocalIP();
         void plus()override; // 线程执行函数
+        int sendData(const char *buf,int buf_len);
+        QTcpSocket * tcp_socket_ = nullptr;  //socket
+
     private slots:
         //自定义槽函数
         void  onConnected() ;
@@ -40,8 +43,7 @@ class DeviceTCPClient:public IDevice
         void  onSocketReadyRead() ; //读取socket传入的数据
 
     private:
-         void initConnect();
-        QTcpSocket * tcp_socket_ = nullptr;  //socket
+         void initConnect();        
         bool misConnectService = false; //判断是否连接了服务器
 };
 

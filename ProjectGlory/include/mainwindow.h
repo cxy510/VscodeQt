@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "sublib1.h"
 #include "device.h"
+#include "TableViewPrint.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -17,17 +18,20 @@ class MyMainWindow : public QMainWindow
 public:
     MyMainWindow(QWidget *parent = nullptr);
     ~MyMainWindow();
+    void printMsg(QString str);
  
+public slots:
+    void slotLib1Clicked();
+    void slotConnectTcp();
+    void slotSendTcp();
+    void slotConnected();
     
 private:
+    void initUi();
     void initDll();
     void initConnect();
     Ui::MainWindow *ui;
     DeviceTCPClient *device_tcp_client_;     
-   
-
-private slots:
-    void slotLib1Clicked();
-    void slotConnectTcp();
+    TableViewPrint *tableview_print_=NULL;
 };
 #endif // MAINWINDOW_H
