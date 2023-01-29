@@ -33,12 +33,22 @@ void DeviceTCPClient::startDevice(QString str_ip,uint32_t int_port){
 }
 
 // 线程执行函数
-void DeviceTCPClient::plus(){
-    // while (tcp_socket_->canReadLine())
-    // {         
-         qDebug()<<tcp_socket_->readLine(5);
-    //}
+bool DeviceTCPClient::plus(){
+    if(tcp_socket_->canReadLine()) {   
+        memset(rcv_buf,0,sizeof(rcv_buf));    
+        rcv_len=0;          
+        rcv_len=tcp_socket_->readLine((char*)rcv_buf,RCV_MAX);
+        return true;
+    }
+    return false;
 }
+
+// 数据接收函数
+ void DeviceTCPClient::rcvData(int8_t *buf,int32_t &buf_len,uint32_t read_size){
+   if(tcp_socket_->canReadLine()) {   
+        buf_len=tcp_socket_->readLine((char*)buf,read_size);
+   }
+ }
 
 // 发送
 int DeviceTCPClient::sendData(const char *buf,int buf_len){

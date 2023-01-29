@@ -12,14 +12,15 @@
 #include <QtCore/QObject>
 #include <QtNetwork/QTcpSocket>
 
-#define DllExport __declspec(dllimport)
+#define SEND_MAX 20*1024
+#define RCV_MAX  2*1024*1024
 
 class IDevice
 {
 public:
     IDevice(){}
     virtual ~IDevice(){}
-    virtual void plus()=0; // 线程执行函数
+    virtual bool plus()=0; // 线程执行函数
 
 };
 
@@ -31,8 +32,8 @@ class DeviceTCPClient:public IDevice
         ~DeviceTCPClient();     
         void startDevice(QString str_ip,uint32_t int_port);
         QString getLocalIP();
-        void plus()override; // 线程执行函数
-        int sendData(const char *buf,int buf_len);
+        bool plus()override; // 线程执行函数
+        int sendData(const char *buf,int buf_len);        
         QTcpSocket * tcp_socket_ = nullptr;  //socket
 
     private slots:
@@ -43,8 +44,11 @@ class DeviceTCPClient:public IDevice
         void  onSocketReadyRead() ; //读取socket传入的数据
 
     private:
-         void initConnect();        
+        void initConnect();        
+        void rcvData(int8_t *buf,int32_t &buf_len,uint32_t read_size=RCV_MAX);
         bool misConnectService = false; //判断是否连接了服务器
+        uint32_t rcv_len=0;
+        uint8_t  rcv_buf[RCV_MAX];
 };
 
 //DllExport DeviceTCPClient* CreateDeviceTCPClient();
