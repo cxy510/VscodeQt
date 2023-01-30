@@ -1,10 +1,3 @@
-/**
- *  @file      IDevice.h
- *  @brief     通信设备模块
- *  @author    cxy(wuyuming510@139.com)
- *  @date      2023-1-16
- *  @copyright 
- */
 
 #ifndef __TABLEVIEW_PRINT_H__
 #define __TABLEVIEW_PRINT_H__
