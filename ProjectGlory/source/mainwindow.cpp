@@ -9,13 +9,15 @@ MyMainWindow::MyMainWindow(QWidget *parent)
     ui->setupUi(this); 
     setWindowIcon(QIcon(":/resource/resources/ico.jpg"));    
     initUi();
-    initDll();
+    intMoudle();
     initConnect();    
 }
 MyMainWindow::~MyMainWindow()
 {
     delete ui;
-    delete device_tcp_client_;device_tcp_client_=NULL;
+    if(task_tcp_client_){
+        delete task_tcp_client_;task_tcp_client_=NULL;
+    }    
 }
 
 void MyMainWindow::initConnect(){
@@ -26,27 +28,40 @@ void MyMainWindow::initConnect(){
     connect(ui->btn_send_tcp,SIGNAL(clicked()),this,SLOT(slotSendTcp()));
     
     //device_tcp_client_->tcp_socket_;
-   connect(device_tcp_client_->tcp_socket_, SIGNAL(connected()), this, SLOT(slotConnected()));
+   //connect(device_tcp_client_->tcp_socket_, SIGNAL(connected()), this, SLOT(slotConnected()));
     //connect(device_tcp_client_->tcp_socket_, &QTcpSocket::connected, this, &MyMainWindow::slotConnected);    
 }
 
-void MyMainWindow::initDll(){
-    device_tcp_client_=new DeviceTCPClient;//CreateDeviceTCPClient();
+void MyMainWindow::intMoudle(){
+    //device_tcp_client_=new DeviceTCPClient;//CreateDeviceTCPClient();
+    task_tcp_client_=new TaskTcpClient();
+    task_tcp_client_->setAutoDelete(true);
+    
+
+    test_tcp_client=new TaskTcpClient();
+    test_tcp_client->setAutoDelete(true);
+
+    thread_pool_.setMaxThreadCount(2);   //设置线程池最大线程数量
+    thread_pool_.start(task_tcp_client_);
+    thread_pool_.start(test_tcp_client);
+   
+   // thread_pool_.waitForDone();  
 }
 
 void MyMainWindow::slotLib1Clicked(){
     //printMsg("中文");
-    device_tcp_client_->plus();
+    //device_tcp_client_->plus();
 }
 
 void MyMainWindow::slotConnectTcp(){
-    device_tcp_client_->startDevice("127.0.0.1",9999);
+    task_tcp_client_->startConnectTcp("127.0.0.1",9999);
+    test_tcp_client->startConnectTcp("127.0.0.1",9999);
 
 }
 
 void MyMainWindow::slotSendTcp(){
     QString str="hello";
-    device_tcp_client_->sendData(str.toStdString().c_str(),str.length());
+    task_tcp_client_->sendData(str.toStdString().c_str(),str.length());
 }
 
 void MyMainWindow::slotConnected(){

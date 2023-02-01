@@ -13,7 +13,7 @@
 #include <QtNetwork/QTcpSocket>
 
 #define SEND_MAX 20*1024
-#define RCV_MAX  2*1024*1024
+#define RCV_MAX  20*1024
 
 class IDevice
 {
@@ -33,7 +33,8 @@ class DeviceTCPClient:public IDevice
         void startDevice(QString str_ip,uint32_t int_port);
         QString getLocalIP();
         bool plus()override; // 线程执行函数
-        int sendData(const char *buf,int buf_len);        
+        int sendData(const char *buf,int buf_len);   
+        void rcvData(int8_t *buf,int32_t &buf_len,uint32_t read_size=RCV_MAX);     
         QTcpSocket * tcp_socket_ = nullptr;  //socket
 
     private slots:
@@ -45,7 +46,7 @@ class DeviceTCPClient:public IDevice
 
     private:
         void initConnect();        
-        void rcvData(int8_t *buf,int32_t &buf_len,uint32_t read_size=RCV_MAX);
+        
         bool misConnectService = false; //判断是否连接了服务器
         uint32_t rcv_len=0;
         uint8_t  rcv_buf[RCV_MAX];

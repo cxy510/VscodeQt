@@ -2,9 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "sublib1.h"
+#include <QThreadPool>
+//#include "sublib1.h"
 #include "device.h"
 #include "TableViewPrint.h"
+#include "TaskTcpClient.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -28,10 +30,14 @@ public slots:
     
 private:
     void initUi();
-    void initDll();
+    void intMoudle();
     void initConnect();
+    
     Ui::MainWindow *ui;
-    DeviceTCPClient *device_tcp_client_;     
+    //DeviceTCPClient *device_tcp_client_;     
+    TaskTcpClient *task_tcp_client_=NULL;
     TableViewPrint *tableview_print_=NULL;
+    QThreadPool thread_pool_;
+    TaskTcpClient *test_tcp_client=NULL;
 };
 #endif // MAINWINDOW_H
