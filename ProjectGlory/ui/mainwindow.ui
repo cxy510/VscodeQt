@@ -17,14 +17,14 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>20</y>
+      <x>430</x>
+      <y>190</y>
       <width>141</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>20221214 增加调试内容</string>
+     <string>20230202 移植至本地PC</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_lib1">
