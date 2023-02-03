@@ -2,17 +2,17 @@
 #define __TASK_TCP_CLIENT_H__
 
 #include <QObject>
-#include <QRunnable>
 #include <QDebug>
 #include <QThread>
 #include <iostream>
 #include <thread>
 #include <chrono>
 #include "device.h"
+#include "Thread.h"
 
 using namespace std;
 
-class TaskTcpClient:public QObject,public QRunnable
+class TaskTcpClient:public QObject,public Runnable
 {
         Q_OBJECT
 public:
@@ -20,11 +20,12 @@ public:
     ~TaskTcpClient();
     void startConnectTcp(QString str_ip,uint32_t int_port);
     int sendData(const char *buf,int buf_len); 
+
 public slots:
     void slotConnected();
 
 protected:
-    void run();
+    void run_task();
 
 private:
    void initConnect();

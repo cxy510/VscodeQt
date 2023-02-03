@@ -22,30 +22,16 @@ MyMainWindow::~MyMainWindow()
 
 void MyMainWindow::initConnect(){
     connect(ui->btn_lib1,SIGNAL(clicked()),this,SLOT(slotLib1Clicked()));
-
     // TCP Client
     connect(ui->btn_conect,SIGNAL(clicked()),this,SLOT(slotConnectTcp()));
     connect(ui->btn_send_tcp,SIGNAL(clicked()),this,SLOT(slotSendTcp()));
     
-    //device_tcp_client_->tcp_socket_;
-   //connect(device_tcp_client_->tcp_socket_, SIGNAL(connected()), this, SLOT(slotConnected()));
-    //connect(device_tcp_client_->tcp_socket_, &QTcpSocket::connected, this, &MyMainWindow::slotConnected);    
+  
 }
 
 void MyMainWindow::intMoudle(){
     //device_tcp_client_=new DeviceTCPClient;//CreateDeviceTCPClient();
-    task_tcp_client_=new TaskTcpClient();
-    task_tcp_client_->setAutoDelete(true);
-    
 
-    test_tcp_client=new TaskTcpClient();
-    test_tcp_client->setAutoDelete(true);
-
-    thread_pool_.setMaxThreadCount(2);   //设置线程池最大线程数量
-    thread_pool_.start(task_tcp_client_);
-    thread_pool_.start(test_tcp_client);
-   
-   // thread_pool_.waitForDone();  
 }
 
 void MyMainWindow::slotLib1Clicked(){

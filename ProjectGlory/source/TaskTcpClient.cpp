@@ -16,23 +16,16 @@ void TaskTcpClient::startConnectTcp(QString str_ip,uint32_t int_port){
     device_tcp_.startDevice(str_ip,int_port);
 }
 
-void TaskTcpClient::run()
+void TaskTcpClient::run_task()
 {
-   // while(1)
-   {        
-         int32_t rcv_len=0;
-         device_tcp_.rcvData(rcv_buf_,rcv_len);
-         qDebug()<< "线程id："<< QThread::currentThreadId()<<"收到数据 "<<QString::fromLocal8Bit((char*)rcv_buf_,rcv_len);
-        
-        this_thread::sleep_for(chrono::milliseconds(500));//sleep 1毫秒
-    }
-   
-    // int i = 10;
-    // while(i--)
-    // {
-    //     qDebug() << "线程id："<< QThread::currentThreadId()<< QString(":剩余%1").arg(i);
-    //     QThread::sleep(1);
-    // }
+       
+    int32_t rcv_len=0;
+    device_tcp_.rcvData(rcv_buf_,rcv_len);
+    qDebug()<< "线程id："<< QThread::currentThreadId()<<"收到数据 "<<QString::fromLocal8Bit((char*)rcv_buf_,rcv_len);
+
+    if (rcv_len<=0) {
+            this_thread::sleep_for(chrono::milliseconds(500));//sleep 1毫秒
+    }  
 }
 
 void TaskTcpClient::initConnect(){

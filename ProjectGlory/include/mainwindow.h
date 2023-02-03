@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include <QThreadPool>
-//#include "sublib1.h"
 #include "device.h"
 #include "TableViewPrint.h"
 #include "TaskTcpClient.h"
@@ -37,7 +36,6 @@ private:
     //DeviceTCPClient *device_tcp_client_;     
     TaskTcpClient *task_tcp_client_=NULL;
     TableViewPrint *tableview_print_=NULL;
-    QThreadPool thread_pool_;
     TaskTcpClient *test_tcp_client=NULL;
 };
 #endif // MAINWINDOW_H
