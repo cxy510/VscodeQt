@@ -6,6 +6,7 @@
 #include "device.h"
 #include "TableViewPrint.h"
 #include "TaskTcpClient.h"
+#include "ThreadManager.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -32,10 +33,11 @@ private:
     void intMoudle();
     void initConnect();
     
-    Ui::MainWindow *ui;
-    //DeviceTCPClient *device_tcp_client_;     
-    TaskTcpClient *task_tcp_client_=NULL;
-    TableViewPrint *tableview_print_=NULL;
-    TaskTcpClient *test_tcp_client=NULL;
+    Ui::MainWindow *ui; 
+     
+    ThreadManager thread_pool_; // 线程池 
+    TaskTcpClient *task_tcp_client1_=NULL;
+    TaskTcpClient *task_tcp_client2_=NULL;
+    TableViewPrint *tableview_print_=NULL;// 表格
 };
 #endif // MAINWINDOW_H

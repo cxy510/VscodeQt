@@ -1,7 +1,7 @@
 # Set the project name
 project (ThreadPool)
 
-#find_package (Qt5Network)
+find_package (Qt5Core)
 # message(111${Qt5Network_INCLUDE_DIRS})
 
 # 查找当前文件夹中的所有相关文件
@@ -12,5 +12,6 @@ target_include_directories( ${PROJECT_NAME}
     PUBLIC ${PROJECT_SOURCE_DIR}/include    
 ) 
 
-#target_link_libraries(Device PRIVATE Qt5::Network) 
+# 导入lib库
+target_link_libraries(ThreadPool PRIVATE Qt5::Core) 
 

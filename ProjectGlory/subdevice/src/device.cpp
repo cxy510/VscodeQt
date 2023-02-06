@@ -45,9 +45,9 @@ bool DeviceTCPClient::plus(){
 
 // 数据接收函数
  void DeviceTCPClient::rcvData(int8_t *buf,int32_t &buf_len,uint32_t read_size){    
-    if(tcp_socket_!=NULL/*&&tcp_socket_->canReadLine()*/) {  
+    if(tcp_socket_!=NULL&&tcp_socket_->isOpen()) {  
         buf_len=tcp_socket_->readLine((char*)buf,read_size);
-        qDebug()<<tcp_socket_->localPort()<<" read num:"<<buf_len;
+        // qDebug()<<tcp_socket_->localPort()<<" read num:"<<buf_len;
     }
  }
 

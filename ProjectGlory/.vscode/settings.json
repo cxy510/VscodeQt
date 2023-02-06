@@ -4,6 +4,7 @@
     "files.associations": {
         "qthread": "cpp",
         "ostream": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "iostream": "cpp"
     } //打开代码提示
 }

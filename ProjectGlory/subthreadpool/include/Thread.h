@@ -4,25 +4,31 @@
 //#include <QString>
 #include <vector>
 #include <iostream>
+#include <QtCore/QThread>
 using namespace std;
 class Runnable
 {
 public:
 	virtual ~Runnable() {};
-	virtual void Run() = 0;
+	virtual void run_task() = 0;
 };
 
-class CThread : public Runnable
+class CThread:public QThread
 {
 
 	public:
 		CThread();
-		CThread(Runnable * pRunnable);
+		int getTaskNum(){
+			return vec_task_.size();
+		}
+		void pushTask(Runnable *ptask);
+
+	protected:
+		virtual void run(); 
 
 	private:
 		explicit CThread(const CThread & rhs);
-		vector<Runnable*> m_taskvec;  
-
+		vector<Runnable*> vec_task_;  
 };
 
 #endif  

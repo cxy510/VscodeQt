@@ -1,6 +1,6 @@
 #pragma once
 #include "Thread.h"
-#define TNUM 3
+#define TNUM 1
 
 class ThreadManager
 {
@@ -10,8 +10,8 @@ public:
 	~ThreadManager();
 	void startThread();
 	void endThread();
-	void Pushtask(Runnable *ptask);
+	void pushtask(Runnable *ptask);
 private:
-	//CThread thread[TNUM];
+	CThread thread_group_[TNUM];
 };
 

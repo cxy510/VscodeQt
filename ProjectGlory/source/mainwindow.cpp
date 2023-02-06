@@ -15,9 +15,9 @@ MyMainWindow::MyMainWindow(QWidget *parent)
 MyMainWindow::~MyMainWindow()
 {
     delete ui;
-    if(task_tcp_client_){
-        delete task_tcp_client_;task_tcp_client_=NULL;
-    }    
+    // if(task_tcp_client_){
+    //     delete task_tcp_client_;task_tcp_client_=NULL;
+    // }    
 }
 
 void MyMainWindow::initConnect(){
@@ -31,7 +31,12 @@ void MyMainWindow::initConnect(){
 
 void MyMainWindow::intMoudle(){
     //device_tcp_client_=new DeviceTCPClient;//CreateDeviceTCPClient();
+    task_tcp_client1_=new TaskTcpClient;
+    thread_pool_.pushtask(task_tcp_client1_);
+    task_tcp_client2_=new TaskTcpClient;
+    thread_pool_.pushtask(task_tcp_client2_);
 
+    thread_pool_.startThread();
 }
 
 void MyMainWindow::slotLib1Clicked(){
@@ -40,14 +45,16 @@ void MyMainWindow::slotLib1Clicked(){
 }
 
 void MyMainWindow::slotConnectTcp(){
-    task_tcp_client_->startConnectTcp("127.0.0.1",9999);
-    test_tcp_client->startConnectTcp("127.0.0.1",9999);
+    task_tcp_client1_->startConnectTcp("127.0.0.1",9999);
+    task_tcp_client2_->startConnectTcp("127.0.0.1",9999);
 
 }
 
 void MyMainWindow::slotSendTcp(){
-    QString str="hello";
-    task_tcp_client_->sendData(str.toStdString().c_str(),str.length());
+    QString str1="task1:hello";
+    task_tcp_client1_->sendData(str1.toStdString().c_str(),str1.length());
+    QString str2="task2:hello";
+    task_tcp_client2_->sendData(str2.toStdString().c_str(),str2.length());
 }
 
 void MyMainWindow::slotConnected(){
