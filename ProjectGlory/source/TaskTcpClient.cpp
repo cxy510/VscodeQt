@@ -3,23 +3,28 @@
 TaskTcpClient::TaskTcpClient(QObject *parent) : QObject(parent)
 {
     rcv_buf_=new int8_t[RCV_MAX];
+    device_tcp_=new DeviceTCPClient();
 }
 
 TaskTcpClient::~TaskTcpClient()
 {
     delete []rcv_buf_;
     rcv_buf_=NULL;
+
+    delete device_tcp_;
+    device_tcp_=NULL;
+    
     qDebug()<<"delete Task";
 }
 
 void TaskTcpClient::startConnectTcp(QString str_ip,uint32_t int_port){
-    device_tcp_.startDevice(str_ip,int_port);
+    device_tcp_->startDevice(str_ip,int_port);
 }
 
 void TaskTcpClient::run_task()
 {       
     int32_t rcv_len=0;
-    device_tcp_.rcvData(rcv_buf_,rcv_len);  
+    device_tcp_->rcvData(rcv_buf_,rcv_len);  
 
     if (rcv_len<=0) {
         this_thread::sleep_for(chrono::milliseconds(50));//sleep 1毫秒
@@ -29,7 +34,7 @@ void TaskTcpClient::run_task()
 }
 
 void TaskTcpClient::initConnect(){
-    connect(device_tcp_.tcp_socket_, SIGNAL(connected()), this, SLOT(slotConnected()));
+    connect(device_tcp_->tcp_socket_, SIGNAL(connected()), this, SLOT(slotConnected()));
 }
 
 void TaskTcpClient::slotConnected(){
@@ -38,5 +43,5 @@ void TaskTcpClient::slotConnected(){
 
 // 发送
 int TaskTcpClient::sendData(const char *buf,int buf_len){
-    return device_tcp_.sendData(buf,buf_len);
+    return device_tcp_->sendData(buf,buf_len);
 }

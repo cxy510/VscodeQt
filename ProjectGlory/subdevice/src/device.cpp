@@ -14,7 +14,11 @@ DeviceTCPClient::DeviceTCPClient(){
 }
 
 DeviceTCPClient::~DeviceTCPClient(){
-    
+    if(tcp_socket_!=NULL){
+        tcp_socket_->close();
+        delete tcp_socket_;
+        tcp_socket_=NULL;
+    }
 }
 
 void DeviceTCPClient::initConnect(){

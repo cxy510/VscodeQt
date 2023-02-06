@@ -29,7 +29,7 @@ protected:
 
 private:
    void initConnect();
-   DeviceTCPClient device_tcp_;  
+   DeviceTCPClient *device_tcp_=NULL;  
    int8_t  *rcv_buf_;
 
 };

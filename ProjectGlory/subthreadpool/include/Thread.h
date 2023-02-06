@@ -22,6 +22,7 @@ class CThread:public QThread
 			return vec_task_.size();
 		}
 		void pushTask(Runnable *ptask);
+		void endThread();
 
 	protected:
 		virtual void run(); 

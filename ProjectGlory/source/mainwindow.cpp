@@ -71,3 +71,7 @@ void MyMainWindow::printMsg(QString str){
     // str_print<<str;
     // tableview_print_->insertData(str_print);
 }
+
+void MyMainWindow::closeEvent(QCloseEvent *event){
+     thread_pool_.endThread();
+}

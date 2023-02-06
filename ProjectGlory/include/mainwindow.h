@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QThreadPool>
+#include <QCloseEvent>
 #include "device.h"
 #include "TableViewPrint.h"
 #include "TaskTcpClient.h"
@@ -27,6 +28,9 @@ public slots:
     void slotConnectTcp();
     void slotSendTcp();
     void slotConnected();
+
+protected:
+    void closeEvent(QCloseEvent *event);
     
 private:
     void initUi();

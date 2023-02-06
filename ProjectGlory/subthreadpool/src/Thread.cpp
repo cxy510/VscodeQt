@@ -24,3 +24,12 @@ void CThread::run(){
 void CThread::pushTask(Runnable *ptask){
     vec_task_.push_back(ptask);
 }
+
+void CThread::endThread(){
+	auto itr = vec_task_.begin();
+	while (itr != vec_task_.end()){// 释放所有任务
+		delete (*itr);	
+		itr++;	
+	}
+	terminate(); // 关闭线程
+}

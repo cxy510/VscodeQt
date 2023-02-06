@@ -15,7 +15,7 @@ void ThreadManager::startThread() {
 }
 void ThreadManager::endThread() {
 	for (int i = 0; i < TNUM; i++) {
-		thread_group_[i].terminate();
+		thread_group_[i].endThread();
 	}
 }
 void ThreadManager::pushtask(Runnable *ptask)
