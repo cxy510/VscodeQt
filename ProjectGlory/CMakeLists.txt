@@ -25,6 +25,7 @@ FILE(GLOB SOURCE_FILES  "source/*")
 FILE(GLOB HEADER_FILES  "include/*") 
 FILE(GLOB QRC_FILES  "qrc/*.qrc") 
 FILE(GLOB UI_FILES  "ui/*.ui") 
+FILE(GLOB CUSTOM_FILES  "custom/*") 
 
 # 生成ui.h文件
 QT5_WRAP_UI(UI_FILES_H ${UI_FILES})
@@ -34,17 +35,19 @@ QT5_ADD_RESOURCES(QRC_FILES_CPP ${QRC_FILES})
  
 #生成可执行文件
 ADD_EXECUTABLE(ProjectGlory 
-    main.cpp
+    main.cpp    
     ${SOURCE_FILES} 
     ${HEADER_FILES} 
     ${UI_FILES_H}  
-    ${QRC_FILES_CPP}     
+    ${QRC_FILES_CPP}       
+    ${CUSTOM_FILES}  
 )
 # Add sub directories
 # add_subdirectory(sublibrary1)
 add_subdirectory(subdevice)
 add_subdirectory(subthreadpool)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/custom)
 
 # 导入lib库
 target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui) 

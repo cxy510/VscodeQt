@@ -21,13 +21,11 @@ class MyMainWindow : public QMainWindow
 public:
     MyMainWindow(QWidget *parent = nullptr);
     ~MyMainWindow();
-    void printMsg(QString str);
  
 public slots:
-    void slotLib1Clicked();
     void slotConnectTcp();
     void slotSendTcp();
-    void slotConnected();
+    void slotEndTcp();
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -35,8 +33,8 @@ protected:
 private:
     void initUi();
     void intMoudle();
-    void initConnect();
-    
+    void initConnect();    
+
     Ui::MainWindow *ui; 
      
     ThreadManager thread_pool_; // 线程池 

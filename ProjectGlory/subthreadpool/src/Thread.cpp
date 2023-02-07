@@ -31,5 +31,6 @@ void CThread::endThread(){
 		delete (*itr);	
 		itr++;	
 	}
+	qDebug()<<"结束线程："<<QThread::currentThreadId();
 	terminate(); // 关闭线程
 }

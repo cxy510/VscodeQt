@@ -34,20 +34,14 @@ class DeviceTCPClient:public IDevice
         QString getLocalIP();
         bool plus()override; // 线程执行函数
         int sendData(const char *buf,int buf_len);   
-        void rcvData(int8_t *buf,int32_t &buf_len,uint32_t read_size=RCV_MAX);     
+        void rcvData(int8_t *buf,int32_t &buf_len,uint32_t read_size=RCV_MAX);
+
         QTcpSocket * tcp_socket_ = nullptr;  //socket
 
     private slots:
-        //自定义槽函数
-        void  onConnected() ;
-        void  onDisconnected() ;
-        void  onSocketStateChange(QAbstractSocket::SocketState socketState) ;
-        void  onSocketReadyRead() ; //读取socket传入的数据
 
     private:
-        void initConnect();        
-        
-        bool misConnectService = false; //判断是否连接了服务器
+        void initConnect();                
         uint32_t rcv_len=0;
         uint8_t  rcv_buf[RCV_MAX];
 };

@@ -1,9 +1,10 @@
 #include "TaskTcpClient.h"
 
-TaskTcpClient::TaskTcpClient(QObject *parent) : QObject(parent)
+TaskTcpClient::TaskTcpClient(QString tcp_name,QObject *parent) :tcp_name_(tcp_name),QObject(parent)
 {
     rcv_buf_=new int8_t[RCV_MAX];
     device_tcp_=new DeviceTCPClient();
+    initConnect();
 }
 
 TaskTcpClient::~TaskTcpClient()
@@ -12,8 +13,7 @@ TaskTcpClient::~TaskTcpClient()
     rcv_buf_=NULL;
 
     delete device_tcp_;
-    device_tcp_=NULL;
-    
+    device_tcp_=NULL;    
     qDebug()<<"delete Task";
 }
 
@@ -35,11 +35,19 @@ void TaskTcpClient::run_task()
 
 void TaskTcpClient::initConnect(){
     connect(device_tcp_->tcp_socket_, SIGNAL(connected()), this, SLOT(slotConnected()));
+    connect(device_tcp_->tcp_socket_, SIGNAL(disconnected()), this, SLOT(slotDisconnected()));   
+
 }
 
 void TaskTcpClient::slotConnected(){
-      qDebug()<<"TCP连接成功";
+      qDebug()<<"TCP连接成功 "<<tcp_name_;
 }
+
+void TaskTcpClient::slotDisconnected(){
+      qDebug()<<"TCP断开链接 "<<tcp_name_;
+}
+
+
 
 // 发送
 int TaskTcpClient::sendData(const char *buf,int buf_len){

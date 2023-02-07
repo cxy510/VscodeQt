@@ -22,10 +22,6 @@ DeviceTCPClient::~DeviceTCPClient(){
 }
 
 void DeviceTCPClient::initConnect(){
-    // connect(tcp_socket_, &QTcpSocket::connected, this, &DeviceTCPClient::onConnected);
-    // connect(tcp_socket_, &QTcpSocket::disconnected, this, &DeviceTCPClient::onDisconnected);
-    // connect(tcp_socket_, &QTcpSocket::stateChanged, this, &DeviceTCPClient::onSocketStateChange);
-    // connect(tcp_socket_, &QTcpSocket::readyRead, this, &DeviceTCPClient::onSocketReadyRead);
 }
 
 void DeviceTCPClient::startDevice(QString str_ip,uint32_t int_port){
@@ -58,13 +54,4 @@ bool DeviceTCPClient::plus(){
 // 发送
 int DeviceTCPClient::sendData(const char *buf,int buf_len){
     tcp_socket_->write(buf,buf_len);
-}
-
-
-void DeviceTCPClient::onConnected()
-{
-    //connected()信号槽函数
-    // ui->plainTextEdit->appendPlainText ("**已连接到服务器") ;
-    // ui ->plainTextEdit->appendPlainText ("**peer address:"+ mTcpClient->peerAddress().toString()) ;
-    // ui ->plainTextEdit->appendPlainText ("**peer port:"+ QString::number(mTcpClient->peerPort())) ;  
 }

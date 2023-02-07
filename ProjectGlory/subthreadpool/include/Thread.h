@@ -5,6 +5,7 @@
 #include <vector>
 #include <iostream>
 #include <QtCore/QThread>
+#include <QtDebug>
 using namespace std;
 class Runnable
 {
