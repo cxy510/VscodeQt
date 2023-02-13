@@ -53,13 +53,9 @@ target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/custom)
 
 # 导入lib库
 target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui) 
-# target_link_libraries(ProjectGlory PRIVATE mylib)
-target_link_libraries(ProjectGlory PRIVATE Device)
-target_link_libraries(ProjectGlory PRIVATE ThreadPool)
-target_link_libraries(ProjectGlory PRIVATE AnalyzeSqlite)
+target_link_libraries(ProjectGlory PRIVATE Device ThreadPool AnalyzeSqlite)
+
 
 # 设置dll路径与执行程序在同一路径下
 # SET_TARGET_PROPERTIES(mylib PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/build)
-SET_TARGET_PROPERTIES(Device PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/build)
-SET_TARGET_PROPERTIES(ThreadPool PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/build)
-SET_TARGET_PROPERTIES(AnalyzeSqlite PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/build)
+SET_TARGET_PROPERTIES(Device ThreadPool AnalyzeSqlite PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/build)

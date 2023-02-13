@@ -10,7 +10,10 @@ MyMainWindow::MyMainWindow(QWidget *parent)
     setWindowIcon(QIcon(":/resource/resources/ico.jpg"));    
     initUi();
     intMoudle();
-    initConnect();    
+    initConnect();   
+    AnalyzeSqlite aa;
+   
+
 }
 MyMainWindow::~MyMainWindow()
 {
@@ -26,6 +29,8 @@ void MyMainWindow::initConnect(){
     connect(ui->btn_conect,SIGNAL(clicked()),this,SLOT(slotConnectTcp()));
     connect(ui->btn_send_tcp,SIGNAL(clicked()),this,SLOT(slotSendTcp()));
     connect(ui->btn_end_tcp,SIGNAL(clicked()),this,SLOT(slotEndTcp()));
+
+    // Analzye db
     
   
 }

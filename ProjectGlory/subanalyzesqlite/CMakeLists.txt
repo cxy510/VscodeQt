@@ -3,7 +3,8 @@
 project(AnalyzeSqlite)
 
 find_package(Qt5Sql)
-# message(111${Qt5Network_INCLUDE_DIRS})
+find_package(Qt5Gui)
+find_package(Qt5Core)
 
 # 查找当前文件夹中的所有相关文件
 FILE(GLOB SOURCE_FILES  "src/*") 
@@ -14,5 +15,5 @@ target_include_directories( ${PROJECT_NAME}
 ) 
 
 # 导入lib库
-target_link_libraries(${PROJECT_NAME}  PRIVATE Qt5::Sql) 
+target_link_libraries(${PROJECT_NAME}  PRIVATE Qt5::Sql Qt5::Gui Qt5::Core) 
 
