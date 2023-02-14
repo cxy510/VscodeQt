@@ -5,7 +5,7 @@ AnalyzeSqlite::AnalyzeSqlite(){
 }
 
 AnalyzeSqlite::~AnalyzeSqlite(){
-    db_.cloneDatabase();
+    closeSqlite();
 }
 
 bool AnalyzeSqlite::openSqlite(QString connect_name,QString db_path){
