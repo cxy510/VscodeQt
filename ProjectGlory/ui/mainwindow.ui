@@ -74,7 +74,7 @@
        <attribute name="title">
         <string>数据库</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,1,9">
+       <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,1,15">
         <property name="leftMargin">
          <number>6</number>
         </property>
@@ -89,6 +89,9 @@
         </property>
         <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>15</number>
+          </property>
           <item>
            <widget class="QLineEdit" name="lineEdit_str">
             <property name="sizePolicy">
@@ -97,10 +100,25 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>D:\TSP_Database.db</string>
+            </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="btn_opensqlite">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>35</height>
+             </size>
+            </property>
             <property name="text">
              <string>连接数据</string>
             </property>
@@ -118,10 +136,25 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>select * from secnum</string>
+            </property>
            </widget>
           </item>
           <item>
            <widget class="QPushButton" name="btn_query">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>35</height>
+             </size>
+            </property>
             <property name="text">
              <string>查询</string>
             </property>

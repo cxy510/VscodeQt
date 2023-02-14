@@ -10,9 +10,7 @@ MyMainWindow::MyMainWindow(QWidget *parent)
     setWindowIcon(QIcon(":/resource/resources/ico.jpg"));    
     initUi();
     intMoudle();
-    initConnect();   
-    AnalyzeSqlite aa;
-   
+    initConnect();      
 
 }
 MyMainWindow::~MyMainWindow()
@@ -31,7 +29,8 @@ void MyMainWindow::initConnect(){
     connect(ui->btn_end_tcp,SIGNAL(clicked()),this,SLOT(slotEndTcp()));
 
     // Analzye db
-    
+    connect(ui->btn_opensqlite,SIGNAL(clicked()),this,SLOT(slotOpenSqlite()));
+    connect(ui->btn_query,SIGNAL(clicked()),this,SLOT(slotQuerySqlite()));
   
 }
 
@@ -67,4 +66,16 @@ void MyMainWindow::closeEvent(QCloseEvent *event){
 
 void MyMainWindow::slotEndTcp(){
     thread_pool_.endThread();
+}
+
+void MyMainWindow::slotOpenSqlite(){
+    QString path=ui->lineEdit_str->text();
+    analyze_sqlite_.openSqlite("wym_text1",path);
+    
+}
+
+void MyMainWindow::slotQuerySqlite(){
+    QString query_str=ui->lineEdit_query->text();
+    shared_ptr<QSqlQuery> result=analyze_sqlite_.querySqlite(query_str);
+    qDebug()<<"query_rows:"<<analyze_sqlite_.getQueryRow(result);
 }
