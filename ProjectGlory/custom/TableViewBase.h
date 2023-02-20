@@ -14,9 +14,11 @@ class TableViewBase
         //void insertData(QStringList stringlist);
         //void setRowData(int row,QStringList stringlist); 
 
-    private:
-        virtual void initModel();
+    protected:
         QAbstractTableModel *model_=NULL;   
+        
+    private:
+        virtual void initModel();        
         QTableView *tableview_=NULL;
 };
 
