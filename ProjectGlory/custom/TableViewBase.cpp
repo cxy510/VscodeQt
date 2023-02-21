@@ -1,7 +1,7 @@
 #include "TableViewBase.h"
 
-TableViewBase::TableViewBase(QTableView *tableview,QAbstractTableModel *model):tableview_(tableview),model_(model){ 
-    initModel();
+TableViewBase::TableViewBase(QTableView *tableview):tableview_(tableview){ 
+    //initModel();
 }
 
 TableViewBase::~TableViewBase(){

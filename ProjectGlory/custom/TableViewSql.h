@@ -4,13 +4,16 @@
 
 #include "TableViewBase.h"
 #include <QSqlTableModel>
+#include <QSqlDatabase>
+
 
 
 class TableViewSQL:public TableViewBase
 {    
     public:
-        TableViewSQL(QTableView *tableview);
-        ~TableViewBase();     
+        TableViewSQL(QTableView *tableview,const QSqlDatabase&db);
+        ~TableViewSQL();     
+        void selectTable(QString table_name,QString str_filter);
         //void insertData(QStringList stringlist);
         //void setRowData(int row,QStringList stringlist); 
     private:

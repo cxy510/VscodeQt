@@ -16,6 +16,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package (Qt5Core)
 find_package (Qt5Widgets)
 find_package (Qt5Gui)
+find_package (Qt5Sql)
+
 
 message(111${CMAKE_SOURCE_DIR})
 
@@ -52,7 +54,7 @@ target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/custom)
 
 # 导入lib库
-target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui) 
+target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui Qt5::Sql) 
 target_link_libraries(ProjectGlory PRIVATE Device ThreadPool AnalyzeSqlite)
 
 

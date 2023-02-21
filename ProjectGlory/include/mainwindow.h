@@ -9,6 +9,7 @@
 #include "TaskTcpClient.h"
 #include "ThreadManager.h"
 #include "AnalyzeSqlite.h"
+#include "TableViewSql.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -30,6 +31,7 @@ public slots:
 
     void slotOpenSqlite();
     void slotQuerySqlite();
+    void slotTableDisplay();
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -46,5 +48,8 @@ private:
     TaskTcpClient *task_tcp_client2_=NULL;
     AnalyzeSqlite analyze_sqlite_;
 
+    TableViewSQL *table_mgr_sql_=NULL;
+    
+    QSqlTableModel *model_test;
 };
 #endif // MAINWINDOW_H

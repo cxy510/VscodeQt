@@ -70,3 +70,7 @@ int AnalyzeSqlite::getQueryRow(shared_ptr<QSqlQuery>get_query){
  void AnalyzeSqlite::closeSqlite(){
     db_.close();
  }
+
+const QSqlDatabase &AnalyzeSqlite::getDatabase(){
+    return db_;
+ }

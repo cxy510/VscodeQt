@@ -5,21 +5,24 @@
 #include <QTableView>
 #include <QAbstractTableModel>
 #include <QHeaderView>
+#include <QDebug>
 
 class TableViewBase
 {    
     public:
-        TableViewBase(QTableView *tableview,QAbstractTableModel *model);
-        ~TableViewBase();     
+        TableViewBase(QTableView *tableview);
+        virtual ~TableViewBase();   
+        virtual void initModel();       
         //void insertData(QStringList stringlist);
         //void setRowData(int row,QStringList stringlist); 
 
     protected:
         QAbstractTableModel *model_=NULL;   
-        
-    private:
-        virtual void initModel();        
         QTableView *tableview_=NULL;
+
+    private:
+           
+        
 };
 
 #endif
