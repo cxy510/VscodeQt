@@ -23,6 +23,4 @@ void TableViewSQL::selectTable(QString table_name,QString str_filter){
         qDebug()<<"select table:"<<model_sql_->lastError();
         return;
     }
-
-
 }

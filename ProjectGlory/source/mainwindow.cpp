@@ -88,35 +88,7 @@ void MyMainWindow::slotQuerySqlite(){
 }
 
 void MyMainWindow::slotTableDisplay(){
-  //table_mgr_sql_->selectTable("secnum");    
-
-//     QSqlDatabase get_db=QSqlDatabase::addDatabase("QSQLITE");
-//     QString path=ui->lineEdit_str->text();
-//     get_db.setDatabaseName(path);
-
-//   if(!get_db.open())
-//     {
-//         qDebug()<<"error: failed to connect sqlite3 database."<< get_db.lastError();
-//         //return ;
-//     }
-//     else {
-//         qDebug()<<"success to connect sqlite3 database.";
-//         //return ;
-//     }
 
     table_mgr_sql_->selectTable("secnum",QString("tlj = '%1'").arg("01H"));
-
-    //   QSqlTableModel *model=new QSqlTableModel(this,analyze_sqlite_.getDatabase());
-    //   model->setTable("secnum");
-    //   model->select();
-    //   qDebug()<<"error:"<<model->lastError();
-    //   ui->tableView->setModel(model);
-      //int salary = model.record(4).value("salary").toInt();
-
-    // model_test=new QSqlTableModel(this,get_db);
-    // model_test->setTable("secnum");
-    // model_test->setEditStrategy(QSqlTableModel::OnManualSubmit); 
-    // qDebug()<<model_test->select();
-    // ui->tableView->setModel(model_test);
-
+   
 }
