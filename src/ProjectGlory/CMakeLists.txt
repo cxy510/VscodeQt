@@ -1,5 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
-
+cmake_minimum_required(VERSION 3.23)
 project(ProjectGlory LANGUAGES CXX)
 
 #包含当前路径
@@ -12,14 +11,18 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON) 
 
-#find_package(Qt5 COMPONENTS Widgets Gui REQUIRED)
-find_package (Qt5Core)
-find_package (Qt5Widgets)
-find_package (Qt5Gui)
-find_package (Qt5Sql)
+# set(Boost_DEBUG ON)
+# set(BOOST_ROOT "D:/ProgTools/boost_1_78_0")    # 指定Boost库的根目录
+# set(BOOST_LIBRARIES "D:/ProgTools/boost_1_78_0/stage/libs")    # 指定Boost库的根目录
+# set(BOOST_INCLUDE_DIRS "D:/ProgTools/boost_1_78_0")    # 指定Boost库的根目录
+set(Boost_USE_STATIC_LIBS ON)    # 设置使用Boost静态库
+set(Boost_ARCHITECTURE "-x32")    # 指定库架构为x86
+#find_package(Boost 1.78.0 REQUIRED COMPONENTS regex)
+#link_directories(${Boost_LIBRARY_DIRS})
+#include_directories(${BOOST_ROOT})    # 包含Boost库的头文件目录
 
-message(111${CMAKE_SOURCE_DIR})
-
+# 载入所有Qt的库
+find_package(Qt5 COMPONENTS Widgets Gui sql core REQUIRED)
 
 # 查找当前文件夹中的所有相关文件
 FILE(GLOB SOURCE_FILES  "source/*") 
@@ -43,12 +46,10 @@ ADD_EXECUTABLE(ProjectGlory
     ${QRC_FILES_CPP}       
     ${CUSTOM_FILES}  
 )
-# Add sub directories
-# add_subdirectory(sublibrary1)
+
 add_subdirectory(subdevice)
 add_subdirectory(subthreadpool)
 add_subdirectory(subanalyzesqlite)
-
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/../../include/)
 
@@ -56,7 +57,5 @@ target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/../../incl
 target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui Qt5::Sql)  
 target_link_libraries(ProjectGlory PRIVATE Device ThreadPool AnalyzeSqlite)
 
-
 # 设置dll路径与执行程序在同一路径下
-# SET_TARGET_PROPERTIES(mylib PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/build)
 SET_TARGET_PROPERTIES(Device ThreadPool AnalyzeSqlite ProjectGlory PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/../../bin/)
