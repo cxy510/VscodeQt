@@ -21,8 +21,11 @@ set(Boost_ARCHITECTURE "-x32")    # 指定库架构为x86
 #link_directories(${Boost_LIBRARY_DIRS})
 #include_directories(${BOOST_ROOT})    # 包含Boost库的头文件目录
 
+
 # 载入所有Qt的库
 find_package(Qt5 COMPONENTS Widgets Gui sql core REQUIRED)
+
+#find_package(MPI REQUIRED)
 
 # 查找当前文件夹中的所有相关文件
 FILE(GLOB SOURCE_FILES  "source/*") 
@@ -52,10 +55,13 @@ add_subdirectory(subthreadpool)
 add_subdirectory(subanalyzesqlite)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/../../include/)
+target_include_directories(ProjectGlory PRIVATE "D:/Program Files (x86)/Microsoft SDKs/MPI/Include")
+target_include_directories(ProjectGlory PRIVATE "D:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64")
 
 # 导入lib库
 target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui Qt5::Sql)  
 target_link_libraries(ProjectGlory PRIVATE Device ThreadPool AnalyzeSqlite)
+target_link_libraries(ProjectGlory PRIVATE "D:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib")
 
 # 设置dll路径与执行程序在同一路径下
 SET_TARGET_PROPERTIES(Device ThreadPool AnalyzeSqlite ProjectGlory PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/../../bin/)
