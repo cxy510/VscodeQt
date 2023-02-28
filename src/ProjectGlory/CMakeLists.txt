@@ -55,13 +55,11 @@ add_subdirectory(subthreadpool)
 add_subdirectory(subanalyzesqlite)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/../../include/)
-target_include_directories(ProjectGlory PRIVATE "D:/Program Files (x86)/Microsoft SDKs/MPI/Include")
-target_include_directories(ProjectGlory PRIVATE "D:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64")
 
 # 导入lib库
 target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui Qt5::Sql)  
 target_link_libraries(ProjectGlory PRIVATE Device ThreadPool AnalyzeSqlite)
-target_link_libraries(ProjectGlory PRIVATE "D:/Program Files (x86)/Microsoft SDKs/MPI/Lib/x64/msmpi.lib")
+target_link_libraries(ProjectGlory PRIVATE "${PROJECT_SOURCE_DIR}/../../lib/mpi/x86/msmpi.lib")
 
 # 设置dll路径与执行程序在同一路径下
 SET_TARGET_PROPERTIES(Device ThreadPool AnalyzeSqlite ProjectGlory PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/../../bin/)
