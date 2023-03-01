@@ -50,11 +50,13 @@ ADD_EXECUTABLE(ProjectGlory
     ${CUSTOM_FILES}  
 )
 
+target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/../../include/)
+target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
 add_subdirectory(subdevice)
 add_subdirectory(subthreadpool)
 add_subdirectory(subanalyzesqlite)
-target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
-target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/../../include/)
+
+
 
 # 导入lib库
 target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui Qt5::Sql)  

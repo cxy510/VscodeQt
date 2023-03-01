@@ -9,7 +9,7 @@ MyMainWindow::MyMainWindow(QWidget *parent)
     ui->setupUi(this); 
     setWindowIcon(QIcon(":/resource/resources/ico.jpg"));    
     initUi();
-    intMoudle();
+    //intMoudle();
     initConnect();      
 
 }
@@ -38,7 +38,10 @@ void MyMainWindow::initConnect(){
     connect(ui->btn_query,SIGNAL(clicked()),this,SLOT(slotQuerySqlite()));
     connect(ui->btn_sql_model,SIGNAL(clicked()),this,SLOT(slotTableDisplay()));
     
-  
+    // Mpi
+    connect(ui->btn_init_mpi,SIGNAL(clicked()),this,SLOT(slotConnectMpi()));
+    connect(ui->btn_send_mpi,SIGNAL(clicked()),this,SLOT(slotSendMpi()));
+    connect(ui->btn_end_mpi,SIGNAL(clicked()),this,SLOT(slotEndMpi()));
 }
 
 void MyMainWindow::intMoudle(){
@@ -88,7 +91,19 @@ void MyMainWindow::slotQuerySqlite(){
 }
 
 void MyMainWindow::slotTableDisplay(){
+    table_mgr_sql_->selectTable("secnum",QString("tlj = '%1'").arg("01H"));   
+}
 
-    table_mgr_sql_->selectTable("secnum",QString("tlj = '%1'").arg("01H"));
-   
+void MyMainWindow::slotConnectMpi(){
+    task_mpi_=new TaskMpi();
+    thread_pool_.pushtask(task_mpi_);
+    thread_pool_.startThread();    
+}
+
+void MyMainWindow::slotSendMpi(){
+    task_mpi_->sendMsg();
+}
+
+void MyMainWindow::slotEndMpi(){
+    thread_pool_.endThread();
 }

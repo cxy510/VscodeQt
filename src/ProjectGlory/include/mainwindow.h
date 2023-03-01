@@ -7,6 +7,7 @@
 #include "device.h"
 
 #include "TaskTcpClient.h"
+#include "TaskMpi.h"
 #include "ThreadManager.h"
 #include "AnalyzeSqlite.h"
 
@@ -34,6 +35,10 @@ public slots:
     void slotQuerySqlite();
     void slotTableDisplay();
 
+    void slotConnectMpi();
+    void slotSendMpi();
+    void slotEndMpi();
+
 protected:
     void closeEvent(QCloseEvent *event);
     
@@ -47,6 +52,7 @@ private:
     ThreadManager thread_pool_; // 线程池 
     TaskTcpClient *task_tcp_client1_=NULL;
     TaskTcpClient *task_tcp_client2_=NULL;
+    TaskMpi*task_mpi_=NULL;
     AnalyzeSqlite analyze_sqlite_;
     TableViewSQL *table_mgr_sql_=NULL;  
   
