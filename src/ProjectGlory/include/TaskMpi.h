@@ -25,6 +25,7 @@ private:
     int id_=1;// 进程id
     int source_id_=0; // 接收的进程号
     MPI_Status mpi_status_;// mpi状态信息
+    MPI_Request request_; // 非阻塞通信对象request
 };
 
 #endif
