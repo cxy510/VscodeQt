@@ -39,6 +39,8 @@ public slots:
     void slotSendMpi();
     void slotEndMpi();
 
+    void slotBeginThread();
+
 protected:
     void closeEvent(QCloseEvent *event);
     

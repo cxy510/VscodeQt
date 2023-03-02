@@ -15,12 +15,17 @@ class TaskMpi:public QObject,public Runnable
 public:
     explicit TaskMpi(QObject *parent = nullptr);
     ~TaskMpi();  
-    void sendMsg();
+    void sendMsgBlock();
+    void sendMsgNotBlock();
+    int getProcessId();
 
 protected:
     void run_task()override;
 
 private:  
+    void rcvDataBlock();
+    void rcvDataNotBlock();
+
     int process_num_=0;// 进程数量
     int id_=1;// 进程id
     int source_id_=0; // 接收的进程号

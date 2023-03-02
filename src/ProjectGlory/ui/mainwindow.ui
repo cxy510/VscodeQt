@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>893</width>
-    <height>837</height>
+    <width>866</width>
+    <height>761</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -72,13 +72,26 @@
        <widget class="QWidget" name="layoutWidget_2">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>230</y>
-          <width>691</width>
+          <x>20</x>
+          <y>140</y>
+          <width>758</width>
           <height>59</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="lbl_mpi">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>进程号：</string>
+           </property>
+          </widget>
+         </item>
          <item>
           <widget class="QPushButton" name="btn_init_mpi">
            <property name="text">
@@ -101,6 +114,19 @@
           </widget>
          </item>
         </layout>
+       </widget>
+       <widget class="QPushButton" name="btn_begin_threadpool">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>230</y>
+          <width>187</width>
+          <height>57</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>启动线程池</string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_2">

@@ -41,16 +41,23 @@ void MyMainWindow::initConnect(){
     // Mpi
     connect(ui->btn_init_mpi,SIGNAL(clicked()),this,SLOT(slotConnectMpi()));
     connect(ui->btn_send_mpi,SIGNAL(clicked()),this,SLOT(slotSendMpi()));
-    connect(ui->btn_end_mpi,SIGNAL(clicked()),this,SLOT(slotEndMpi()));
+    
+
+    // Begin ThreadPool
+    connect(ui->btn_begin_threadpool,SIGNAL(clicked()),this,SLOT(slotBeginThread()));
 }
+
 
 void MyMainWindow::intMoudle(){
     //device_tcp_client_=new DeviceTCPClient;//CreateDeviceTCPClient();
     task_tcp_client1_=new TaskTcpClient("task1");
     thread_pool_.pushtask(task_tcp_client1_);
     task_tcp_client2_=new TaskTcpClient("task2");
-    thread_pool_.pushtask(task_tcp_client2_);
-    thread_pool_.startThread();    
+    thread_pool_.pushtask(task_tcp_client2_);    
+}
+
+void MyMainWindow::slotBeginThread(){
+    thread_pool_.startThread();   
 }
 
 void MyMainWindow::slotConnectTcp(){
@@ -96,12 +103,18 @@ void MyMainWindow::slotTableDisplay(){
 
 void MyMainWindow::slotConnectMpi(){
     task_mpi_=new TaskMpi();
-    thread_pool_.pushtask(task_mpi_);
-    thread_pool_.startThread();    
+    if (task_mpi_->getProcessId()==0)// 0号进程才进行线程循环接收
+    {
+         thread_pool_.pushtask(task_mpi_);   
+    }
+    
+   
+    ui->lbl_mpi->setText(QString("进程号:%1").arg(task_mpi_->getProcessId()));
 }
 
 void MyMainWindow::slotSendMpi(){
-    task_mpi_->sendMsg();
+    //task_mpi_->sendMsgBlock();
+    task_mpi_->sendMsgNotBlock();
 }
 
 void MyMainWindow::slotEndMpi(){
