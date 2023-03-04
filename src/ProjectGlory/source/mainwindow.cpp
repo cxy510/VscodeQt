@@ -39,9 +39,11 @@ void MyMainWindow::initConnect(){
     connect(ui->btn_sql_model,SIGNAL(clicked()),this,SLOT(slotTableDisplay()));
     
     // Mpi
-    connect(ui->btn_init_mpi,SIGNAL(clicked()),this,SLOT(slotConnectMpi()));
-    connect(ui->btn_send_mpi,SIGNAL(clicked()),this,SLOT(slotSendMpi()));
-    
+    connect(ui->btn_init_mpi_block,SIGNAL(clicked()),this,SLOT(slotInitBlockMpi()));
+    connect(ui->btn_init_mpi_noblock,SIGNAL(clicked()),this,SLOT(slotInitNoBlockMpi()));
+    connect(ui->btn_send_mpi,SIGNAL(clicked()),this,SLOT(slotSendBlockMpi()));
+    connect(ui->btn_send_mpi_noblock,SIGNAL(clicked()),this,SLOT(slotSendNoBlockMpi()));
+    connect(ui->btn_end_mpi,SIGNAL(clicked()),this,SLOT(slotEndMpi()));
 
     // Begin ThreadPool
     connect(ui->btn_begin_threadpool,SIGNAL(clicked()),this,SLOT(slotBeginThread()));
@@ -101,22 +103,39 @@ void MyMainWindow::slotTableDisplay(){
     table_mgr_sql_->selectTable("secnum",QString("tlj = '%1'").arg("01H"));   
 }
 
-void MyMainWindow::slotConnectMpi(){
-    task_mpi_=new TaskMpi();
+void MyMainWindow::slotInitBlockMpi(){
+    task_mpi_=new TaskMpi(TaskMpi::kIsBlock);
     if (task_mpi_->getProcessId()==0)// 0号进程才进行线程循环接收
     {
          thread_pool_.pushtask(task_mpi_);   
     }
     
    
-    ui->lbl_mpi->setText(QString("进程号:%1").arg(task_mpi_->getProcessId()));
+    ui->lbl_mpi->setText(QString("Block进程号:%1").arg(task_mpi_->getProcessId()));
 }
 
-void MyMainWindow::slotSendMpi(){
-    //task_mpi_->sendMsgBlock();
+void MyMainWindow::slotInitNoBlockMpi(){
+    task_mpi_=new TaskMpi(TaskMpi::kNotBlcok);
+    if (task_mpi_->getProcessId()==0)// 0号进程才进行线程循环接收
+    {
+         thread_pool_.pushtask(task_mpi_);   
+    }   
+   
+    ui->lbl_mpi->setText(QString("NoBlock进程号:%1").arg(task_mpi_->getProcessId()));
+}
+
+void MyMainWindow::slotSendBlockMpi(){
+    task_mpi_->sendMsgBlock();
+    //task_mpi_->sendMsgNotBlock();
+}
+
+void MyMainWindow::slotSendNoBlockMpi(){
     task_mpi_->sendMsgNotBlock();
+    //task_mpi_->sendMsgNotBlock();
 }
 
 void MyMainWindow::slotEndMpi(){
     thread_pool_.endThread();
+    delete task_mpi_;
+    task_mpi_=NULL;
 }

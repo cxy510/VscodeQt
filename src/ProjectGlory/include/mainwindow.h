@@ -35,8 +35,10 @@ public slots:
     void slotQuerySqlite();
     void slotTableDisplay();
 
-    void slotConnectMpi();
-    void slotSendMpi();
+    void slotInitBlockMpi();
+    void slotInitNoBlockMpi();
+    void slotSendBlockMpi();
+    void slotSendNoBlockMpi();
     void slotEndMpi();
 
     void slotBeginThread();

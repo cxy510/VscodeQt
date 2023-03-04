@@ -12,12 +12,15 @@ using namespace std;
 class TaskMpi:public QObject,public Runnable
 {
         Q_OBJECT
-public:
-    explicit TaskMpi(QObject *parent = nullptr);
+public:    
+    enum BlockType{kIsBlock=1,kNotBlcok=2};
+    explicit TaskMpi(BlockType block_type,QObject *parent = nullptr);
     ~TaskMpi();  
     void sendMsgBlock();
     void sendMsgNotBlock();
     int getProcessId();
+    void initMpiBlcok();
+    void initMpiNotBlock();
 
 protected:
     void run_task()override;
@@ -30,7 +33,8 @@ private:
     int id_=1;// 进程id
     int source_id_=0; // 接收的进程号
     MPI_Status mpi_status_;// mpi状态信息
-    MPI_Request request_; // 非阻塞通信对象request
+    MPI_Request *request_; // 非阻塞通信对象request
+    BlockType block_type_=kIsBlock;
 };
 
 #endif
