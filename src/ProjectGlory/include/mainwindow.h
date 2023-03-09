@@ -56,7 +56,7 @@ private:
     ThreadManager thread_pool_; // 线程池 
     TaskTcpClient *task_tcp_client1_=NULL;
     TaskTcpClient *task_tcp_client2_=NULL;
-    TaskMpi*task_mpi_=NULL;
+    TaskMpi*task_mpi_=NULL;// 
     AnalyzeSqlite analyze_sqlite_;
     TableViewSQL *table_mgr_sql_=NULL;  
   
