@@ -31,7 +31,6 @@ void MyMainWindow::initConnect(){
     // TCP Client
     connect(ui->btn_conect,SIGNAL(clicked()),this,SLOT(slotConnectTcp()));
     connect(ui->btn_send_tcp,SIGNAL(clicked()),this,SLOT(slotSendTcp()));
-    connect(ui->btn_end_tcp,SIGNAL(clicked()),this,SLOT(slotEndTcp()));
 
     // Analzye db
     connect(ui->btn_opensqlite,SIGNAL(clicked()),this,SLOT(slotOpenSqlite()));
@@ -43,19 +42,17 @@ void MyMainWindow::initConnect(){
     connect(ui->btn_init_mpi_noblock,SIGNAL(clicked()),this,SLOT(slotInitNoBlockMpi()));
     connect(ui->btn_send_mpi,SIGNAL(clicked()),this,SLOT(slotSendBlockMpi()));
     connect(ui->btn_send_mpi_noblock,SIGNAL(clicked()),this,SLOT(slotSendNoBlockMpi()));
-    connect(ui->btn_end_mpi,SIGNAL(clicked()),this,SLOT(slotEndMpi()));
 
     // Begin ThreadPool
-    connect(ui->btn_begin_threadpool,SIGNAL(clicked()),this,SLOT(slotBeginThread()));
+    connect(ui->btn_begin_threadpool,SIGNAL(clicked()),this,SLOT(slotBeginThreadPool()));
+    connect(ui->btn_end_threadpool,SIGNAL(clicked()),this,SLOT(slotEndThreadPool()));
+    
 }
 
 
 void MyMainWindow::intMoudle(){
     //device_tcp_client_=new DeviceTCPClient;//CreateDeviceTCPClient();
-    task_tcp_client1_=new TaskTcpClient("task1");
-    thread_pool_.pushtask(task_tcp_client1_);
-    task_tcp_client2_=new TaskTcpClient("task2");
-    thread_pool_.pushtask(task_tcp_client2_);    
+  
 }
 
 void MyMainWindow::initUi(){
@@ -63,17 +60,25 @@ void MyMainWindow::initUi(){
 }
 
 /***线程池***/
-void MyMainWindow::slotBeginThread(){
+void MyMainWindow::slotBeginThreadPool(){
     thread_pool_.startThread();   
 }
-// 增加结束线程池
-void MyMainWindow::closeEvent(QCloseEvent *event){
-     thread_pool_.endThread();
+
+void MyMainWindow::slotEndThreadPool(){
+    thread_pool_.endThread();  
 }
 
+// 增加结束线程池
+void MyMainWindow::closeEvent(QCloseEvent *event){
+    
+}
 
 /***TCP***/
 void MyMainWindow::slotConnectTcp(){
+    task_tcp_client1_=new TaskTcpClient("task1");
+    thread_pool_.pushtask(task_tcp_client1_);
+    task_tcp_client2_=new TaskTcpClient("task2");
+    thread_pool_.pushtask(task_tcp_client2_);    
     task_tcp_client1_->startConnectTcp("127.0.0.1",9999);
     task_tcp_client2_->startConnectTcp("127.0.0.1",9999);
 }
@@ -85,9 +90,6 @@ void MyMainWindow::slotSendTcp(){
     task_tcp_client2_->sendData(str2.toStdString().c_str(),str2.length());
 }
 
-void MyMainWindow::slotEndTcp(){
-    thread_pool_.endThread();
-}
 
 
 /***SQLITE***/
@@ -138,8 +140,3 @@ void MyMainWindow::slotSendNoBlockMpi(){
     task_mpi_->sendMsgNotBlock();
 }
 
-void MyMainWindow::slotEndMpi(){
-    thread_pool_.endThread();
-    delete task_mpi_;
-    task_mpi_=NULL;
-}

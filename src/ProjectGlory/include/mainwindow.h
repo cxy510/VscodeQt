@@ -29,7 +29,6 @@ public:
 public slots:
     void slotConnectTcp();
     void slotSendTcp();
-    void slotEndTcp();
 
     void slotOpenSqlite();
     void slotQuerySqlite();
@@ -39,9 +38,9 @@ public slots:
     void slotInitNoBlockMpi();
     void slotSendBlockMpi();
     void slotSendNoBlockMpi();
-    void slotEndMpi();
 
-    void slotBeginThread();
+    void slotBeginThreadPool();
+    void slotEndThreadPool();
 
 protected:
     void closeEvent(QCloseEvent *event);
