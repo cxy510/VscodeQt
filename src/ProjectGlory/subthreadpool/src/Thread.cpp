@@ -28,7 +28,7 @@ void CThread::pushTask(Runnable *ptask){
 void CThread::endThread(){
 	auto itr = vec_task_.begin();
 	while (itr != vec_task_.end()){// 释放所有任务
-		//delete (*itr);	
+		delete (*itr);	
 		itr++;	
 	}
 	qDebug()<<"结束线程："<<QThread::currentThreadId();

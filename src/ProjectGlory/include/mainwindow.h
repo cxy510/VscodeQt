@@ -29,7 +29,6 @@ public:
 public slots:
     void slotConnectTcp();
     void slotSendTcp();
-    void slotEndTcp();
 
     void slotOpenSqlite();
     void slotQuerySqlite();
@@ -39,9 +38,9 @@ public slots:
     void slotInitNoBlockMpi();
     void slotSendBlockMpi();
     void slotSendNoBlockMpi();
-    void slotEndMpi();
 
-    void slotBeginThread();
+    void slotBeginThreadPool();
+    void slotEndThreadPool();
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -56,7 +55,7 @@ private:
     ThreadManager thread_pool_; // 线程池 
     TaskTcpClient *task_tcp_client1_=NULL;
     TaskTcpClient *task_tcp_client2_=NULL;
-    TaskMpi*task_mpi_=NULL;
+    TaskMpi*task_mpi_=NULL;// 
     AnalyzeSqlite analyze_sqlite_;
     TableViewSQL *table_mgr_sql_=NULL;  
   

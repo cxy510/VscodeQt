@@ -72,8 +72,8 @@
        <widget class="QPushButton" name="btn_begin_threadpool">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>430</y>
+          <x>10</x>
+          <y>490</y>
           <width>187</width>
           <height>57</height>
          </rect>
@@ -164,6 +164,19 @@
         </property>
         <property name="text">
          <string>End Mpi</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_end_threadpool">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>490</y>
+          <width>187</width>
+          <height>57</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>关闭线程池</string>
         </property>
        </widget>
       </widget>
