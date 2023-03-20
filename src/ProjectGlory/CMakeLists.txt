@@ -24,15 +24,18 @@ set(Boost_ARCHITECTURE "-x32")    # 指定库架构为x86
 
 # 载入所有Qt的库
 find_package(Qt5 COMPONENTS Widgets Gui sql core REQUIRED)
-
-#find_package(MPI REQUIRED)
+# find the protobuf compiler and libraries
+#find_package(Protobuf REQUIRED)
 
 # 查找当前文件夹中的所有相关文件
 FILE(GLOB SOURCE_FILES  "source/*") 
 FILE(GLOB HEADER_FILES  "include/*") 
+FILE(GLOB IDL_FILES  "protobuf/*") 
 FILE(GLOB QRC_FILES  "qrc/*.qrc") 
 FILE(GLOB UI_FILES  "ui/*.ui") 
 FILE(GLOB CUSTOM_FILES  "../../include/tableview/*") 
+
+message(111${HEADER_FILES})
 
 # 生成ui.h文件
 QT5_WRAP_UI(UI_FILES_H ${UI_FILES})
@@ -48,10 +51,13 @@ ADD_EXECUTABLE(ProjectGlory
     ${UI_FILES_H}  
     ${QRC_FILES_CPP}       
     ${CUSTOM_FILES}  
+    ${IDL_FILES}  
 )
 
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/../../include/)
+target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/../../include/google/)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/protobuf)
 add_subdirectory(subdevice)
 add_subdirectory(subthreadpool)
 add_subdirectory(subanalyzesqlite)
@@ -62,6 +68,9 @@ add_subdirectory(subanalyzesqlite)
 target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui Qt5::Sql)  
 target_link_libraries(ProjectGlory PRIVATE Device ThreadPool AnalyzeSqlite)
 target_link_libraries(ProjectGlory PRIVATE "${PROJECT_SOURCE_DIR}/../../lib/mpi/x86/msmpi.lib")
+target_link_libraries(ProjectGlory PRIVATE "${PROJECT_SOURCE_DIR}/../../lib/protobuf3.3/libprotobuf.a")
+target_link_libraries(ProjectGlory PRIVATE "${PROJECT_SOURCE_DIR}/../../lib/protobuf3.3/libprotoc.a")
+target_link_libraries(ProjectGlory PRIVATE "${PROJECT_SOURCE_DIR}/../../lib/protobuf3.3/libprotobuf-lite.a")
 
 # 设置dll路径与执行程序在同一路径下
 SET_TARGET_PROPERTIES(Device ThreadPool AnalyzeSqlite ProjectGlory PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/../../bin/)
