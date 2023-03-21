@@ -84,8 +84,16 @@ void MyMainWindow::slotConnectTcp(){
 }
 
 void MyMainWindow::slotSendTcp(){
-    QString str1="task1:hello";
-    task_tcp_client1_->sendData(str1.toStdString().c_str(),str1.length());
+    QString str1;
+    GLORY::DataStruct ds_message;
+    ds_message.set_num(1);
+    ds_message.set_name("task1:hello");
+    ds_message.set_type(GLORY::DataStruct::kType2);
+    char snd_buf[1024];
+    memset(snd_buf,0,sizeof(snd_buf));
+    ds_message.SerializeToArray(snd_buf,ds_message.ByteSizeLong());
+    task_tcp_client1_->sendData(snd_buf,ds_message.ByteSizeLong());
+
     QString str2="task2:hello";
     task_tcp_client2_->sendData(str2.toStdString().c_str(),str2.length());
 }

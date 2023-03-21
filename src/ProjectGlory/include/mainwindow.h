@@ -12,6 +12,7 @@
 #include "AnalyzeSqlite.h"
 
 #include "tableview/TableViewSql.h"
+#include "PublicType.pb.h"
 
 
 QT_BEGIN_NAMESPACE
