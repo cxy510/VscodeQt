@@ -5,7 +5,7 @@ find_package(Qt5Core)
 
 add_library(${PROJECT_NAME} SHARED src/ziptool.cpp)
 
-target_include_directories( ${PROJECT_NAME}  PRIVATE ${PROJECT_SOURCE_DIR}/../../../include/quazip)
+target_include_directories( ${PROJECT_NAME}  PUBLIC ${PROJECT_SOURCE_DIR}/../../../include/quazip)
 target_include_directories( ${PROJECT_NAME}  PUBLIC ${PROJECT_SOURCE_DIR}/include )
  
 # 导入lib库

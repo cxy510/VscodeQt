@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 //#include <QIcon>
+#include "ziptool.h"
 
 MyMainWindow::MyMainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -46,6 +47,9 @@ void MyMainWindow::initConnect(){
     // Begin ThreadPool
     connect(ui->btn_begin_threadpool,SIGNAL(clicked()),this,SLOT(slotBeginThreadPool()));
     connect(ui->btn_end_threadpool,SIGNAL(clicked()),this,SLOT(slotEndThreadPool()));
+
+    // compress
+    connect(ui->btn_compress,SIGNAL(clicked()),this,SLOT(slotCompress()));
     
 }
 
@@ -148,3 +152,9 @@ void MyMainWindow::slotSendNoBlockMpi(){
     task_mpi_->sendMsgNotBlock();
 }
 
+
+void MyMainWindow::slotCompress(){
+    ZipTool zip_tool;
+    QString target_path=ui->lineEdit_compress->text();
+    zip_tool.compress(target_path+".zip",target_path);
+}
