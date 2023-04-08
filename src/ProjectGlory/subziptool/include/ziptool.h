@@ -9,15 +9,15 @@
 #ifndef __SUB_ZIP_TOOL_H__
 #define __SUB_ZIP_TOOL_H__
 
-#define SEND_MAX 20*1024
-#define RCV_MAX  20*1024
+#include <QString>
+#include "JlCompress.h"
 
 class ZipTool
 {
 public:
     ZipTool();
     ~ZipTool();
-
+    void compress(QString target_name,QString source_path);
 };
 
 

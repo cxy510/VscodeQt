@@ -35,7 +35,7 @@ FILE(GLOB QRC_FILES  "qrc/*.qrc")
 FILE(GLOB UI_FILES  "ui/*.ui") 
 FILE(GLOB CUSTOM_FILES  "../../include/tableview/*") 
 
-message(111${HEADER_FILES})
+message(111${PROJECT_SOURCE_DIR})
 
 # 生成ui.h文件
 QT5_WRAP_UI(UI_FILES_H ${UI_FILES})
