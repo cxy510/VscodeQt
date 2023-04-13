@@ -34,6 +34,8 @@ public slots:
     void slotOpenSqlite();
     void slotQuerySqlite();
     void slotTableDisplay();
+    void slotEncryptSqlite();
+    void slotDecryptSqlite();
 
     void slotInitBlockMpi();
     void slotInitNoBlockMpi();

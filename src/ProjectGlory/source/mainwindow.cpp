@@ -37,6 +37,8 @@ void MyMainWindow::initConnect(){
     connect(ui->btn_opensqlite,SIGNAL(clicked()),this,SLOT(slotOpenSqlite()));
     connect(ui->btn_query,SIGNAL(clicked()),this,SLOT(slotQuerySqlite()));
     connect(ui->btn_sql_model,SIGNAL(clicked()),this,SLOT(slotTableDisplay()));
+    connect(ui->btn_encrypt,SIGNAL(clicked()),this,SLOT(slotEncryptSqlite()));
+    connect(ui->btn_decrypt,SIGNAL(clicked()),this,SLOT(slotDecryptSqlite()));
     
     // Mpi
     connect(ui->btn_init_mpi_block,SIGNAL(clicked()),this,SLOT(slotInitBlockMpi()));
@@ -121,6 +123,15 @@ void MyMainWindow::slotTableDisplay(){
     table_mgr_sql_->selectTable("secnum",QString("tlj = '%1'").arg("01H"));   
 }
 
+void MyMainWindow::slotEncryptSqlite(){
+    QString path=ui->lineEdit_str->text();
+    analyze_sqlite_.encryptSqlite(path);
+}
+
+void MyMainWindow::slotDecryptSqlite(){
+    QString path=ui->lineEdit_str->text();
+    analyze_sqlite_.decryptSqlite(path);
+}
 
 /***MPI***/
 void MyMainWindow::slotInitBlockMpi(){
