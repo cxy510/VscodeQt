@@ -1,7 +1,7 @@
 #include "AnalyzeSqlite.h"
 
 AnalyzeSqlite::AnalyzeSqlite(){
-   //qDebug()<<"SQL:"<<QSqlDatabase::drivers();
+   qDebug()<<"SQL:"<<QSqlDatabase::drivers();
 }
 
 AnalyzeSqlite::~AnalyzeSqlite(){
@@ -73,4 +73,26 @@ int AnalyzeSqlite::getQueryRow(shared_ptr<QSqlQuery>get_query){
 
 const QSqlDatabase &AnalyzeSqlite::getDatabase(){
     return db_;
+ }
+
+// 加密数据库
+ void AnalyzeSqlite::encryptSqlite(QString db_path){
+    QSqlDatabase dbconn = QSqlDatabase::addDatabase("SQLITECIPHER");
+    dbconn.setDatabaseName(db_path);
+    dbconn.setPassword("test");
+    //将原本没有加密的数据库文件进行加密，此代码只需执行一次
+    dbconn.setConnectOptions("QSQLITE_CREATE_KEY");
+    qDebug()<<"is encrypt successful："<<dbconn.open();
+    dbconn.close();
+ }
+
+// 解密密数据库
+ void AnalyzeSqlite::decryptSqlite(QString db_path){
+    QSqlDatabase dbconn = QSqlDatabase::addDatabase("SQLITECIPHER");
+    dbconn.setDatabaseName(db_path);
+    dbconn.setPassword("test");
+    //将原本没有加密的数据库文件进行加密，此代码只需执行一次
+    dbconn.setConnectOptions("QSQLITE_UPDATE_KEY=");
+    qDebug()<<"is decrypt successful："<<dbconn.open();
+    dbconn.close();
  }
