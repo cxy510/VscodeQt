@@ -57,7 +57,8 @@ ADD_EXECUTABLE(ProjectGlory
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/../../include/)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(ProjectGlory PRIVATE ${PROJECT_SOURCE_DIR}/protobuf)
-add_subdirectory(subdevice)
+
+add_subdirectory(subdevice) #如果有该条语句，就先会跑去执行子项目的cmake代码
 add_subdirectory(subthreadpool)
 add_subdirectory(subanalyzesqlite)
 add_subdirectory(subziptool)
@@ -67,7 +68,17 @@ add_subdirectory(subziptool)
 target_link_libraries(ProjectGlory PRIVATE Qt5::Widgets Qt5::Gui Qt5::Sql)  
 target_link_libraries(ProjectGlory PRIVATE Device ThreadPool AnalyzeSqlite ZipTool)
 
-FILE(GLOB PROTOBUF_LIB  "../../lib/protobuf3.3/*.a" "../../lib/mpi/x86/msmpi.lib") 
+
+set(LIB_DIR ${PROJECT_SOURCE_DIR}/../../lib/)
+message(222${LIB_DIR})
+#FILE(GLOB PROTOBUF_LIB  "../../lib/protobuf3.3/*.a" "../../lib/mpi/x86/msmpi.lib") 
+FILE(GLOB PROTOBUF_LIB  ${LIB_DIR}protobuf3.3/*.a ${LIB_DIR}mpi/x86/msmpi.lib) 
+message(333${PROTOBUF_LIB})
+# FILE(GLOB PROTOBUF_LIB  mpi/x86/msmpi.lib)
+# FILE(GLOB PROTOBUF_LIB  protobuf3.3/libprotoc.a)
+# FILE(GLOB PROTOBUF_LIB  protobuf3.3/libprotobuf.a)
+# FILE(GLOB PROTOBUF_LIB  protobuf3.3/libprotobuf-lite.a)
+
 target_link_libraries(ProjectGlory PRIVATE ${PROTOBUF_LIB})
 
 # 设置dll路径与执行程序在同一路径下
