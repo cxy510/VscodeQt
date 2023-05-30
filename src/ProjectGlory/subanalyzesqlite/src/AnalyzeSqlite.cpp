@@ -77,22 +77,44 @@ const QSqlDatabase &AnalyzeSqlite::getDatabase(){
 
 // 加密数据库
  void AnalyzeSqlite::encryptSqlite(QString db_path){
-    QSqlDatabase dbconn = QSqlDatabase::addDatabase("SQLITECIPHER");
-    dbconn.setDatabaseName(db_path);
-    dbconn.setPassword("test");
-    //将原本没有加密的数据库文件进行加密，此代码只需执行一次
-    dbconn.setConnectOptions("QSQLITE_CREATE_KEY");
-    qDebug()<<"is encrypt successful："<<dbconn.open();
-    dbconn.close();
+    QString connect_name="encrypt_name";
+    {
+        QSqlDatabase dbconn;
+        if(QSqlDatabase::contains(connect_name)){   //检测已连接的方式 - 自定义连接名
+            dbconn = QSqlDatabase::database(connect_name);
+        }else{
+            dbconn = QSqlDatabase::addDatabase("SQLITECIPHER",connect_name);//QSqlDatabase::addDatabase("QSQLITE",connect_name);
+        }  
+    
+        //QSqlDatabase dbconn = QSqlDatabase::addDatabase("SQLITECIPHER",connect_name);//QSqlDatabase::addDatabase("SQLITECIPHER");
+        dbconn.setDatabaseName(db_path);
+        dbconn.setPassword("test");
+        //将原本没有加密的数据库文件进行加密，此代码只需执行一次
+        dbconn.setConnectOptions("QSQLITE_CREATE_KEY");
+        qDebug()<<"is encrypt successful："<<dbconn.open();    
+        dbconn.close();
+    }
+    QSqlDatabase::removeDatabase(connect_name);
  }
 
 // 解密密数据库
  void AnalyzeSqlite::decryptSqlite(QString db_path){
-    QSqlDatabase dbconn = QSqlDatabase::addDatabase("SQLITECIPHER");
-    dbconn.setDatabaseName(db_path);
-    dbconn.setPassword("test");
-    //将原本没有加密的数据库文件进行加密，此代码只需执行一次
-    dbconn.setConnectOptions("QSQLITE_UPDATE_KEY=");
-    qDebug()<<"is decrypt successful："<<dbconn.open();
-    dbconn.close();
+    QString connect_name="decrypt_name";
+    {
+        QSqlDatabase dbconn;
+        if(QSqlDatabase::contains(connect_name)){   //检测已连接的方式 - 自定义连接名
+            dbconn = QSqlDatabase::database(connect_name);
+        }else{
+            dbconn = QSqlDatabase::addDatabase("SQLITECIPHER",connect_name);//QSqlDatabase::addDatabase("QSQLITE",connect_name);
+        }  
+
+        //QSqlDatabase dbconn =QSqlDatabase::addDatabase("SQLITECIPHER",connect_name);//QSqlDatabase::addDatabase("SQLITECIPHER");
+        dbconn.setDatabaseName(db_path);
+        dbconn.setPassword("test");
+        //将原本没有加密的数据库文件进行加密，此代码只需执行一次
+        dbconn.setConnectOptions("QSQLITE_UPDATE_KEY=");
+        qDebug()<<"is decrypt successful："<<dbconn.open();    
+        dbconn.close();
+    }
+    QSqlDatabase::removeDatabase(connect_name);
  }
