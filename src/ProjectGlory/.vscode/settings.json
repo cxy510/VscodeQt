@@ -1,4 +1,5 @@
 {
+    "terminal.intergrated.shell.windows": "C\\WINDOWS\\system32\\cmd.exe",
     "workbench.settings.editor": "json",
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "files.associations": {
@@ -73,6 +74,8 @@
         "shared_mutex": "cpp",
         "regex": "cpp",
         "typeindex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "qmainwindow": "cpp",
+        "qcloseevent": "cpp"
     } //打开代码提示
 }

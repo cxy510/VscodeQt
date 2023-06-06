@@ -91,7 +91,7 @@ const QSqlDatabase &AnalyzeSqlite::getDatabase(){
         dbconn.setPassword("test");
         //将原本没有加密的数据库文件进行加密，此代码只需执行一次
         dbconn.setConnectOptions("QSQLITE_CREATE_KEY");
-        qDebug()<<"is encrypt successful："<<dbconn.open();    
+        qDebug()<<"Debug is encrypt successful："<<dbconn.open();    
         dbconn.close();
     }
     QSqlDatabase::removeDatabase(connect_name);
