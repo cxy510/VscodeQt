@@ -18,6 +18,7 @@ public:
     ZipTool();
     ~ZipTool();
     void compress(QString target_name,QString source_path);
+    void unCompress(QString zip_path,QString target_path);
 };
 
 

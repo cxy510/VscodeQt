@@ -46,6 +46,7 @@ public slots:
     void slotEndThreadPool();
 
     void slotCompress();
+    void slotUnCompress();
 
 protected:
     void closeEvent(QCloseEvent *event);

@@ -52,7 +52,7 @@ void MyMainWindow::initConnect(){
 
     // compress
     connect(ui->btn_compress,SIGNAL(clicked()),this,SLOT(slotCompress()));
-    
+    connect(ui->btn_uncompress,SIGNAL(clicked()),this,SLOT(slotUnCompress()));    
 }
 
 
@@ -168,4 +168,13 @@ void MyMainWindow::slotCompress(){
     ZipTool zip_tool;
     QString target_path=ui->lineEdit_compress->text();
     zip_tool.compress(target_path+".zip",target_path);
+}
+
+void MyMainWindow::slotUnCompress(){
+    ZipTool zip_tool;
+    QString zip_path=ui->lineEdit__uncompress->text();
+
+    QFileInfo info(zip_path);
+    qDebug()<<"uncompress dir:"<<info.path();
+    zip_tool.unCompress(zip_path,info.path());
 }

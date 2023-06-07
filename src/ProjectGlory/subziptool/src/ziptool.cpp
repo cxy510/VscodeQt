@@ -14,6 +14,13 @@ ZipTool::~ZipTool(){
 
 }
 
+// 压缩与解压文件夹
 void ZipTool::compress(QString target_name,QString source_path){
     JlCompress::compressDir(target_name,source_path);
+    
 }
+
+void ZipTool::unCompress(QString zip_path,QString target_path){    
+    JlCompress::extractDir(zip_path,target_path);
+}
+ 

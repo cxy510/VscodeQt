@@ -30,7 +30,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -381,7 +381,7 @@
          <item>
           <widget class="QLabel" name="label_2">
            <property name="text">
-            <string>压缩路径：</string>
+            <string>解压路径：</string>
            </property>
           </widget>
          </item>
