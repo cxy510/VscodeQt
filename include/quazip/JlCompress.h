@@ -45,14 +45,7 @@ private:
     static QStringList getFileList(QuaZip *zip);
     static QString extractFile(QuaZip &zip, QString fileName, QString fileDest);
     static QStringList extractFiles(QuaZip &zip, const QStringList &files, const QString &dir);
-    /// Compress a single file.
-    /**
-      \param zip Opened zip to compress the file to.
-      \param fileName The full path to the source file.
-      \param fileDest The full name of the file inside the archive.
-      \return true if success, false otherwise.
-      */
-    static bool compressFile(QuaZip* zip, QString fileName, QString fileDest);
+   
     /// Compress a subdirectory.
     /**
       \param parentZip Opened zip containing the parent directory.
@@ -87,6 +80,16 @@ public:
       \param file The file to compress.
       \return true if success, false otherwise.
       */
+     
+    /// Compress a single file.
+    /**
+      \param zip Opened zip to compress the file to.
+      \param fileName The full path to the source file.
+      \param fileDest The full name of the file inside the archive.
+      \return true if success, false otherwise.
+      */
+    static bool compressFile(QuaZip* zip, QString fileName, QString fileDest);
+
     static bool compressFile(QString fileCompressed, QString file);
     /// Compress a list of files.
     /**

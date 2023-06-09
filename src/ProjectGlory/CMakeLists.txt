@@ -71,8 +71,8 @@ target_link_libraries(ProjectGlory PRIVATE Device ThreadPool AnalyzeSqlite ZipTo
 
 set(LIB_DIR ${PROJECT_SOURCE_DIR}/../../lib/)
 #FILE(GLOB PROTOBUF_LIB  "../../lib/protobuf3.3/*.a" "../../lib/mpi/x86/msmpi.lib") 
-FILE(GLOB PROTOBUF_LIB  ${LIB_DIR}protobuf3.3/*.a ${LIB_DIR}mpi/x86/msmpi.lib) 
-target_link_libraries(ProjectGlory PRIVATE ${PROTOBUF_LIB})
+FILE(GLOB LIB_LIST  ${LIB_DIR}protobuf3.3/*.a ${LIB_DIR}mpi/x86/msmpi.lib) 
+target_link_libraries(ProjectGlory PRIVATE ${LIB_LIST})
 
 # 设置dll路径与执行程序在同一路径下
 SET_TARGET_PROPERTIES(ZipTool Device ThreadPool AnalyzeSqlite ProjectGlory PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${PROJECT_SOURCE_DIR}/../../bin/)

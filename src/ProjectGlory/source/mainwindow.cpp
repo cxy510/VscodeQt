@@ -1,7 +1,9 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <QFileDialog>
 //#include <QIcon>
 #include "ziptool.h"
+
 
 MyMainWindow::MyMainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -53,6 +55,10 @@ void MyMainWindow::initConnect(){
     // compress
     connect(ui->btn_compress,SIGNAL(clicked()),this,SLOT(slotCompress()));
     connect(ui->btn_uncompress,SIGNAL(clicked()),this,SLOT(slotUnCompress()));    
+    connect(ui->btn_compress_data,SIGNAL(clicked()),this,SLOT(slotCompressData()));
+    connect(ui->btn_uncompress_data,SIGNAL(clicked()),this,SLOT(slotUnCompressData()));    
+    connect(ui->btn_compress_file_list,SIGNAL(clicked()),this,SLOT(slotCompressFile()));
+    connect(ui->btn_uncompress_file_list,SIGNAL(clicked()),this,SLOT(slotUnCompressFile()));    
 }
 
 
@@ -167,7 +173,7 @@ void MyMainWindow::slotSendNoBlockMpi(){
 void MyMainWindow::slotCompress(){
     ZipTool zip_tool;
     QString target_path=ui->lineEdit_compress->text();
-    zip_tool.compress(target_path+".zip",target_path);
+    zip_tool.compressDir(target_path+".zip",target_path);
 }
 
 void MyMainWindow::slotUnCompress(){
@@ -176,5 +182,113 @@ void MyMainWindow::slotUnCompress(){
 
     QFileInfo info(zip_path);
     qDebug()<<"uncompress dir:"<<info.path();
-    zip_tool.unCompress(zip_path,info.path());
+    zip_tool.unCompressDir(zip_path,info.path());
+}
+
+// 压缩数据流
+void MyMainWindow::slotCompressData(){
+    ZipTool zip_tool;
+    QString file_path=ui->lineEdit_compress_data->text();    
+    
+    quint64 totalBytes;
+    QFile file(file_path);
+    QByteArray read_byte;
+    QByteArray OutByte;
+    int *errorCode = NULL;
+    if(!file.open(QFile::ReadOnly))
+    {
+        qDebug() << QString("Send file error! Cannot read XmlFile %1(%2).").arg(file_path).arg(file.errorString());
+        return;
+    }
+ 
+    QDataStream out(&read_byte, QIODevice::WriteOnly);
+    totalBytes = file.size();
+    out.device()->seek(0);
+    out<<file.readAll();
+    file.close();
+    read_byte.remove(0,4);
+    qDebug()<<"totalBytes = "<<totalBytes;
+    //qDebug()<<"SendByte = "<<read_byte.toHex();
+ 
+    long outlength = zip_tool.compressData(OutByte,read_byte,errorCode);
+    if(outlength != (-1))
+    {
+        //qDebug()<<"OutByte = "<<OutByte.toHex();
+        qDebug()<<"outlength = "<<outlength;
+ 
+    }
+
+    QString compressed_file_path=qApp->applicationDirPath()+"/"+temp_compress_file_;
+    QFile file_in(compressed_file_path);
+    if(!file_in.open(QFile::WriteOnly))
+    {
+        qDebug() << QString("write file error! error code: %1.").arg(file_in.errorString());
+        return;
+    }
+    file_in.resize(0);//清空原有图片内容
+    file_in.write(OutByte.data(),OutByte.size());
+    file_in.close();
+
+}
+
+// 解压缩数据流
+void MyMainWindow::slotUnCompressData(){
+    ZipTool zip_tool;
+    quint64 totalBytes;
+    QString compressed_file_path=qApp->applicationDirPath()+"/"+temp_compress_file_;
+    QFile file(compressed_file_path);
+    QByteArray read_bytes;
+    QByteArray out_bytes;
+    int *error_code = NULL;
+    if(!file.open(QFile::ReadOnly))
+    {
+        qDebug() << QString("Send file error! Cannot read XmlFile %1(%2).").arg(compressed_file_path).arg(file.errorString());
+        return;
+    }
+    QDataStream out(&read_bytes, QIODevice::WriteOnly);
+    totalBytes = file.size();
+    out.device()->seek(0);
+    out<<file.readAll();
+    file.close();  
+    read_bytes.remove(0,4);
+    qDebug()<<"uncompress totalBytes = "<<totalBytes;
+    // qDebug()<<"uncompress SendByte = "<<read_bytes.toHex();
+
+
+    long decodelenth = zip_tool.uncompressData(out_bytes,read_bytes,error_code);
+    qDebug() << QString("uncompress size: %1,code：%2").arg(out_bytes.size()).arg(decodelenth);
+    QFile file_out("uncompressFile");
+    if(!file_out.open(QFile::WriteOnly))
+    {
+        qDebug() << QString("Send file error! Cannot write uncompressFile (%1).").arg(file_out.errorString());
+        return;
+    }
+    file_out.resize(0);//清空原有图片内容
+    file_out.write(out_bytes.data(),out_bytes.size());
+    file_out.close();
+}
+
+// 逐个文件压缩
+void MyMainWindow::slotCompressFile(){
+    QString zip_name=QFileDialog::getSaveFileName(this,"压缩后文件名称","C:/Users/13523/Desktop",tr("*.zip"));
+    if(zip_name.isEmpty())return;
+    qDebug()<<"begin to compress";
+    //QString target_path=qApp->applicationDirPath()+"/"+temp_compress_file_;
+    ZipTool zip_tool;
+    QString strPath = ui->lineEdit_file_list->text();
+    QDir dir(strPath);
+    QFileInfoList list = dir.entryInfoList(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot);
+    foreach(QFileInfo fileInfo, list)  {
+        qDebug()<<"compress filepath:"<<fileInfo.filePath()<<"  filename:"<<fileInfo.fileName()<<"   target:"<<zip_name;
+        zip_tool.compressSignalFile(fileInfo.fileName(),fileInfo.filePath(),zip_name);
+    }
+}
+
+// 逐个文件解压
+void MyMainWindow::slotUnCompressFile(){
+    QString zip_name=QFileDialog::getOpenFileName(this,"压缩后文件名称","C:/Users/13523/Desktop",tr("*.zip"));
+    if(zip_name.isEmpty())return;
+    ZipTool zip_tool;
+    QFileInfo file_info(zip_name);
+    zip_tool.uncompressSignalFile(zip_name,file_info.path());
 }

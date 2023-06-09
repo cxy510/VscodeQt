@@ -1,4 +1,14 @@
 {
-    "cmake.sourceDirectory": "${workspaceFolder}/src/ProjectGlory"
+    "cmake.sourceDirectory": "${workspaceFolder}/src/ProjectGlory",
+    "files.associations": {
+        "fstream": "cpp",
+        "array": "cpp",
+        "hash_map": "cpp",
+        "hash_set": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "qfiledialog": "cpp",
+        "*.tcc": "cpp"
+    }
     
 }

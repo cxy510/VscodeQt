@@ -45,8 +45,13 @@ public slots:
     void slotBeginThreadPool();
     void slotEndThreadPool();
 
-    void slotCompress();
-    void slotUnCompress();
+    void slotCompress();// 压缩文件夹
+    void slotUnCompress();// 解压压缩包
+    void slotCompressData();// 压缩数据流
+    void slotUnCompressData();// 解压缩数据流
+
+    void slotCompressFile();// 逐个文件压缩
+    void slotUnCompressFile();// 逐个文件解压
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -64,6 +69,8 @@ private:
     TaskMpi*task_mpi_=NULL;// 
     AnalyzeSqlite analyze_sqlite_;
     TableViewSQL *table_mgr_sql_=NULL;  
+
+    QString temp_compress_file_ = "TempCompressFile";
   
 };
 #endif // MAINWINDOW_H
