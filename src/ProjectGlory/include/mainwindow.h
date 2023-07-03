@@ -49,9 +49,14 @@ public slots:
     void slotUnCompress();// 解压压缩包
     void slotCompressData();// 压缩数据流
     void slotUnCompressData();// 解压缩数据流
-
     void slotCompressFile();// 逐个文件压缩
     void slotUnCompressFile();// 逐个文件解压
+
+    void slotSignalBtnClicked();// 信号按钮事件
+    void slotTimeOut();// 模拟槽函数
+
+signals:
+    void signalRefresh();// 发送信号 
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -60,6 +65,12 @@ private:
     void initUi();
     void intMoudle();
     void initConnect();    
+    void initPrintMetaProperty();
+    void initQss();
+    void initTestCode();
+
+
+    void threadSendSignal();// 测试信号发送
 
     Ui::MainWindow *ui; 
      

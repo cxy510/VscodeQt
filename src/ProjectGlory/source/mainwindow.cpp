@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QFileDialog>
+#include <QMetaProperty>
 //#include <QIcon>
 #include "ziptool.h"
 
@@ -13,9 +14,12 @@ MyMainWindow::MyMainWindow(QWidget *parent)
     setWindowIcon(QIcon(":/resource/resources/ico.jpg"));    
     initUi();
     //intMoudle();
-    initConnect();      
-
+    initConnect();     
+    initPrintMetaProperty();
+    initTestCode();
+    initQss();
 }
+
 MyMainWindow::~MyMainWindow()
 {
     delete ui;
@@ -27,6 +31,17 @@ MyMainWindow::~MyMainWindow()
         table_mgr_sql_=NULL;
     }
       
+}
+
+void MyMainWindow::initQss(){
+    QString qss_path=QString::fromLocal8Bit(qApp->applicationDirPath().toLocal8Bit())+"/glory.qss";
+    qDebug()<<"qss_path:"<<qss_path;
+    QFile file_qss(qss_path);
+    qDebug()<<"qss_file_open:"<<file_qss.open(QFile::ReadOnly);
+    if (file_qss.isOpen()) {
+        qApp->setStyleSheet(file_qss.readAll());
+        file_qss.close();
+    }    
 }
 
 void MyMainWindow::initConnect(){
@@ -59,6 +74,11 @@ void MyMainWindow::initConnect(){
     connect(ui->btn_uncompress_data,SIGNAL(clicked()),this,SLOT(slotUnCompressData()));    
     connect(ui->btn_compress_file_list,SIGNAL(clicked()),this,SLOT(slotCompressFile()));
     connect(ui->btn_uncompress_file_list,SIGNAL(clicked()),this,SLOT(slotUnCompressFile()));    
+
+    // 模拟发送信号
+    connect(ui->btn_send_signal,SIGNAL(clicked()),this,SLOT(slotSignalBtnClicked())); 
+    connect(this,SIGNAL(signalRefresh()),this,SLOT(slotTimeOut())); 
+    
 }
 
 
@@ -291,4 +311,75 @@ void MyMainWindow::slotUnCompressFile(){
     ZipTool zip_tool;
     QFileInfo file_info(zip_name);
     zip_tool.uncompressSignalFile(zip_name,file_info.path());
+}
+
+// 打印属性
+void MyMainWindow::initPrintMetaProperty(){
+    QObject *object = this;
+    const QMetaObject *metaobject = object->metaObject();
+    int count = metaobject->propertyCount();
+    for (int i=0; i<count; ++i) {
+        QMetaProperty metaproperty = metaobject->property(i);
+        const char *name = metaproperty.name();
+        QVariant value = object->property(name);
+        qDebug()<<QString::fromStdString(name)<<"-"<<value.toString();
+    }
+
+}
+
+int num=0;
+int &getIntNum(){
+    return num;
+}
+
+void MyMainWindow::initTestCode(){
+    int & num1=getIntNum();
+    num1=2;
+    qDebug()<<"num1:"<<num1<< "   num:"<<num;
+
+    auto num2=getIntNum();
+    num2=5;
+    qDebug()<<"num2:"<<num2<< "   num:"<<num;
+
+    // QToolButton
+    // QToolButton *pButton=ui->toolButton;
+    // pButton->setArrowType(Qt::LeftArrow);
+    // pButton->setText("Left Arrow");
+    // // 文本位于图标之下
+    // pButton->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+    // pButton->setStyleSheet("QToolButton{border: none; background: rgb(68, 69, 73); color: rgb(0, 160, 230);}");
+
+
+    // QAction *pAction = new QAction(this);
+    // pAction->setText(QString::fromLocal8Bit("想定编辑"));
+    // pAction->setIcon(QIcon(":/Images/logo"));
+    // pButton->setIconSize(QSize(48, 48));
+    // pAction->setToolTip(QString::fromLocal8Bit("三生三世"));
+    // pButton->setDefaultAction(pAction);
+    // pButton->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+
+}
+
+void MyMainWindow::threadSendSignal(){
+    for (int i =1; i < 6; i++)
+    {
+        qDebug()<<"!!!Send signal begin:"<<i;
+        emit signalRefresh();
+        qDebug()<<"!!!Send signal end:"<<i;
+    }     
+}
+
+void MyMainWindow::slotSignalBtnClicked(){
+    std::thread thread_send_signal(&MyMainWindow::threadSendSignal,this);
+    thread_send_signal.detach();
+}
+
+void MyMainWindow::slotTimeOut(){
+    static int loop=1;
+    qDebug() << "===SlotTimeOut begin:"<<loop;
+    QObject::sender()->blockSignals(true);
+    QThread::sleep(2);
+    QObject::sender()->blockSignals(false);
+    qDebug() << "===SlotTimeOut end:"<<loop;
+    loop++;
 }

@@ -1,0 +1,29 @@
+/*
+* Author : wuyuming
+*
+* Date : 2023/7/12
+*
+*/
+
+QPushButton,
+QGroupBox,
+QTableView,
+QHeaderView,
+QLabel,
+QComboBox,
+QTabWidget
+{
+  font-family: "仿宋";
+}
+
+
+QLineEdit { 
+	color: red 
+}
+ 
+QLineEdit[readOnly="true"] {
+	color: gray
+}
+
+
+
