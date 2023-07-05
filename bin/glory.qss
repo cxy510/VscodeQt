@@ -4,6 +4,8 @@
 * Date : 2023/7/12
 *
 */
+*[dynamic_background="true"] { background-color: yellow }
+
 
 QPushButton,
 QGroupBox,
@@ -21,9 +23,46 @@ QLineEdit {
 	color: red 
 }
  
+/*只读属性*/
 QLineEdit[readOnly="true"] {
 	color: gray
 }
+
+QLineEdit#lineEdit_select { 
+	color: blue;
+	background-color: yellow;
+	selection-color: yellow;
+	selection-background-color:green;
+}
+
+
+
+
+
+
+QPushButton#btn_test_1{
+	background-color: red;
+	border-style: outset;
+	border-width: 2px;
+	border-radius: 10px;
+	border-color:black;
+	font: bold 14px;
+	min-width: 10em;
+	padding: 6px;
+}
+QPushButton#btn_test_1:pressed {
+	background-color: rgb(224, 0, 0);
+	border-style: inset;
+}
+
+
+/*image 无效
+QPushButton#evilButton::menu-indicator {
+	image: url(myindicator.png);
+}*/
+
+
+
 
 
 

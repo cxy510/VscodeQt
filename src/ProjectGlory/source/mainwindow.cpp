@@ -34,6 +34,7 @@ MyMainWindow::~MyMainWindow()
 }
 
 void MyMainWindow::initQss(){
+    ui->lineEdit_dynamic->setProperty("dynamic_background",true);
     QString qss_path=QString::fromLocal8Bit(qApp->applicationDirPath().toLocal8Bit())+"/glory.qss";
     qDebug()<<"qss_path:"<<qss_path;
     QFile file_qss(qss_path);
