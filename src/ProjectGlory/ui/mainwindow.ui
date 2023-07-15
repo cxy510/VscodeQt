@@ -30,7 +30,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>3</number>
+       <number>4</number>
       </property>
       <property name="tabBarAutoHide">
        <bool>false</bool>
@@ -180,19 +180,6 @@
         </property>
         <property name="text">
          <string>关闭线程池</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="btn_send_signal">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>590</y>
-          <width>187</width>
-          <height>57</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>发送信号</string>
         </property>
        </widget>
       </widget>
@@ -661,6 +648,37 @@
         </property>
         <property name="text">
          <string>通过选择器设置</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>测试页面</string>
+       </attribute>
+       <widget class="QPushButton" name="btn_send_signal">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>187</width>
+          <height>57</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>发送信号（测试信号阻塞）</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_test">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>130</y>
+          <width>187</width>
+          <height>57</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>测试</string>
         </property>
        </widget>
       </widget>

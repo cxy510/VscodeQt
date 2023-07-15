@@ -15,7 +15,7 @@ QLabel,
 QComboBox,
 QTabWidget
 {
-  font-family: "仿宋";
+  /*font-family: "仿宋";*/
 }
 
 

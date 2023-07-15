@@ -1,5 +1,6 @@
 {
-    "cmake.sourceDirectory": "${workspaceFolder}/src/ProjectGlory",
+    "cmake.sourceDirectory": "${workspaceFolder}/src/ProjectAlarmQml",
+    //"cmake.sourceDirectory": "${workspaceFolder}/src/ProjectGlory",
     "files.associations": {
         "fstream": "cpp",
         "array": "cpp",

@@ -1,0 +1,193 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "E:/GitCode/VscodeQt/bin/libThreadPool.dll"
+		},
+		{
+			"path" : "subthreadpool/libThreadPool.dll.a"
+		},
+		{
+			"path" : "E:/GitCode/VscodeQt/bin/libThreadPool.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"subthreadpool/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"fragment" : "-std=gnu++11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"define" : "ThreadPool_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"path" : "E:/GitCode/VscodeQt/src/ProjectGlory/build/subthreadpool"
+				},
+				{
+					"path" : "E:/GitCode/VscodeQt/src/ProjectGlory/subthreadpool"
+				},
+				{
+					"backtrace" : 0,
+					"path" : "E:/GitCode/VscodeQt/src/ProjectGlory/build/subthreadpool/ThreadPool_autogen/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "E:/GitCode/VscodeQt/src/ProjectGlory/subthreadpool/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/Qt/Qt5.9.9/5.9.9/mingw53_32/./mkspecs/win32-g++"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "ThreadPool_autogen::@a6744c7f43324001f277"
+		}
+	],
+	"id" : "ThreadPool::@a6744c7f43324001f277",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\Qt\\Qt5.9.9\\5.9.9\\mingw53_32\\lib\\libQt5Cored.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "ThreadPool",
+	"nameOnDisk" : "libThreadPool.dll",
+	"paths" : 
+	{
+		"build" : "subthreadpool",
+		"source" : "subthreadpool"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/subthreadpool/ThreadPool_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "subthreadpool/src/Thread.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "subthreadpool/src/ThreadManager.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

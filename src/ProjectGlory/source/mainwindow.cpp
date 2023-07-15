@@ -79,6 +79,7 @@ void MyMainWindow::initConnect(){
     // 模拟发送信号
     connect(ui->btn_send_signal,SIGNAL(clicked()),this,SLOT(slotSignalBtnClicked())); 
     connect(this,SIGNAL(signalRefresh()),this,SLOT(slotTimeOut())); 
+    connect(ui->btn_test,SIGNAL(clicked()),this,SLOT(slotTestBtnClicked())); 
     
 }
 
@@ -384,3 +385,9 @@ void MyMainWindow::slotTimeOut(){
     qDebug() << "===SlotTimeOut end:"<<loop;
     loop++;
 }
+
+// 点击测试按钮事件
+ void MyMainWindow::slotTestBtnClicked(){
+
+    
+ }

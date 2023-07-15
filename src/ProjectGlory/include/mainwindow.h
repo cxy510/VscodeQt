@@ -54,6 +54,7 @@ public slots:
 
     void slotSignalBtnClicked();// 信号按钮事件
     void slotTimeOut();// 模拟槽函数
+    void slotTestBtnClicked();// 点击测试按钮事件
 
 signals:
     void signalRefresh();// 发送信号 

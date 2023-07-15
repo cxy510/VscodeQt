@@ -1,0 +1,92 @@
+[
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\ProjectGlory_autogen\\mocs_compilation.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\build\\ProjectGlory_autogen\\mocs_compilation.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/build/ProjectGlory_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\main.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\main.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/main.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\source\\TaskMpi.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\source\\TaskMpi.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/source/TaskMpi.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\source\\TaskTcpClient.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\source\\TaskTcpClient.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/source/TaskTcpClient.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\source\\mainwindow.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\source\\mainwindow.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/source/mainwindow.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\qrc_MyResource.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\build\\qrc_MyResource.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/build/qrc_MyResource.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\E_\\GitCode\\VscodeQt\\include\\tableview\\TableViewBase.cpp.obj -c E:\\GitCode\\VscodeQt\\include\\tableview\\TableViewBase.cpp",
+  "file": "E:/GitCode/VscodeQt/include/tableview/TableViewBase.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\E_\\GitCode\\VscodeQt\\include\\tableview\\TableViewSql.cpp.obj -c E:\\GitCode\\VscodeQt\\include\\tableview\\TableViewSql.cpp",
+  "file": "E:/GitCode/VscodeQt/include/tableview/TableViewSql.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB @CMakeFiles/ProjectGlory.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ProjectGlory.dir\\protobuf\\PublicType.pb.cc.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\protobuf\\PublicType.pb.cc",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/protobuf/PublicType.pb.cc"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subdevice",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DDevice_EXPORTS -DQT_CORE_LIB -DQT_NETWORK_LIB @CMakeFiles/Device.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\Device.dir\\Device_autogen\\mocs_compilation.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\build\\subdevice\\Device_autogen\\mocs_compilation.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subdevice/Device_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subdevice",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DDevice_EXPORTS -DQT_CORE_LIB -DQT_NETWORK_LIB @CMakeFiles/Device.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\Device.dir\\src\\device.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\subdevice\\src\\device.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/subdevice/src/device.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subthreadpool",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DThreadPool_EXPORTS @CMakeFiles/ThreadPool.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ThreadPool.dir\\ThreadPool_autogen\\mocs_compilation.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\build\\subthreadpool\\ThreadPool_autogen\\mocs_compilation.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subthreadpool/ThreadPool_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subthreadpool",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DThreadPool_EXPORTS @CMakeFiles/ThreadPool.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ThreadPool.dir\\src\\Thread.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\subthreadpool\\src\\Thread.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/subthreadpool/src/Thread.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subthreadpool",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DThreadPool_EXPORTS @CMakeFiles/ThreadPool.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ThreadPool.dir\\src\\ThreadManager.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\subthreadpool\\src\\ThreadManager.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/subthreadpool/src/ThreadManager.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subanalyzesqlite",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DAnalyzeSqlite_EXPORTS -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB @CMakeFiles/AnalyzeSqlite.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\AnalyzeSqlite.dir\\AnalyzeSqlite_autogen\\mocs_compilation.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\build\\subanalyzesqlite\\AnalyzeSqlite_autogen\\mocs_compilation.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subanalyzesqlite/AnalyzeSqlite_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subanalyzesqlite",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DAnalyzeSqlite_EXPORTS -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB @CMakeFiles/AnalyzeSqlite.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\AnalyzeSqlite.dir\\src\\AnalyzeSqlite.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\subanalyzesqlite\\src\\AnalyzeSqlite.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/subanalyzesqlite/src/AnalyzeSqlite.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subziptool",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DZipTool_EXPORTS @CMakeFiles/ZipTool.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ZipTool.dir\\ZipTool_autogen\\mocs_compilation.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\build\\subziptool\\ZipTool_autogen\\mocs_compilation.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subziptool/ZipTool_autogen/mocs_compilation.cpp"
+},
+{
+  "directory": "E:/GitCode/VscodeQt/src/ProjectGlory/build/subziptool",
+  "command": "D:\\Qt\\Qt5.9.9\\Tools\\mingw530_32\\bin\\g++.exe -DQT_CORE_LIB -DZipTool_EXPORTS @CMakeFiles/ZipTool.dir/includes_CXX.rsp -g -std=gnu++11 -o CMakeFiles\\ZipTool.dir\\src\\ziptool.cpp.obj -c E:\\GitCode\\VscodeQt\\src\\ProjectGlory\\subziptool\\src\\ziptool.cpp",
+  "file": "E:/GitCode/VscodeQt/src/ProjectGlory/subziptool/src/ziptool.cpp"
+}
+]

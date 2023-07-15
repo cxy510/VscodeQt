@@ -1,0 +1,3 @@
+"D:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\ZipTool.dir/objects.a
+D:\Qt\Qt5.9.9\Tools\mingw530_32\bin\ar.exe qc CMakeFiles\ZipTool.dir/objects.a @CMakeFiles\ZipTool.dir\objects1.rsp
+D:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe -g -shared -o E:\GitCode\VscodeQt\bin\libZipTool.dll -Wl,--out-implib,libZipTool.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\ZipTool.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\ZipTool.dir\linklibs.rsp

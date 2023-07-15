@@ -1,0 +1,218 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "E:/GitCode/VscodeQt/bin/libAnalyzeSqlite.dll"
+		},
+		{
+			"path" : "subanalyzesqlite/libAnalyzeSqlite.dll.a"
+		},
+		{
+			"path" : "E:/GitCode/VscodeQt/bin/libAnalyzeSqlite.pdb"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"subanalyzesqlite/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 13,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g"
+				},
+				{
+					"fragment" : "-std=gnu++11"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "AnalyzeSqlite_EXPORTS"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "QT_SQL_LIB"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"path" : "E:/GitCode/VscodeQt/src/ProjectGlory/build/subanalyzesqlite"
+				},
+				{
+					"path" : "E:/GitCode/VscodeQt/src/ProjectGlory/subanalyzesqlite"
+				},
+				{
+					"backtrace" : 0,
+					"path" : "E:/GitCode/VscodeQt/src/ProjectGlory/build/subanalyzesqlite/AnalyzeSqlite_autogen/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "E:/GitCode/VscodeQt/src/ProjectGlory/subanalyzesqlite/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/Qt/Qt5.9.9/5.9.9/mingw53_32/./mkspecs/win32-g++"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtANGLE"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					2
+				],
+				"standard" : "11"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "AnalyzeSqlite_autogen::@f26d1da7e8d78d27f935"
+		}
+	],
+	"id" : "AnalyzeSqlite::@f26d1da7e8d78d27f935",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\Qt\\Qt5.9.9\\5.9.9\\mingw53_32\\lib\\libQt5Sqld.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\Qt\\Qt5.9.9\\5.9.9\\mingw53_32\\lib\\libQt5Guid.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "D:\\Qt\\Qt5.9.9\\5.9.9\\mingw53_32\\lib\\libQt5Cored.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "AnalyzeSqlite",
+	"nameOnDisk" : "libAnalyzeSqlite.dll",
+	"paths" : 
+	{
+		"build" : "subanalyzesqlite",
+		"source" : "subanalyzesqlite"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/subanalyzesqlite/AnalyzeSqlite_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "subanalyzesqlite/src/AnalyzeSqlite.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

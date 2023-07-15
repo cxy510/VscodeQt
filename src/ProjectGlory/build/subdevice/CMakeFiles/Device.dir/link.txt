@@ -1,0 +1,3 @@
+"D:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Device.dir/objects.a
+D:\Qt\Qt5.9.9\Tools\mingw530_32\bin\ar.exe qc CMakeFiles\Device.dir/objects.a @CMakeFiles\Device.dir\objects1.rsp
+D:\Qt\Qt5.9.9\Tools\mingw530_32\bin\g++.exe -g -shared -o E:\GitCode\VscodeQt\bin\libDevice.dll -Wl,--out-implib,libDevice.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\Device.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\Device.dir\linklibs.rsp

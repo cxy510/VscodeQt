@@ -1,0 +1,200 @@
+{
+	"BUILD_DIR" : "E:/GitCode/VscodeQt/src/ProjectGlory/build/ProjectGlory_autogen",
+	"CMAKE_BINARY_DIR" : "E:/GitCode/VscodeQt/src/ProjectGlory/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "E:/GitCode/VscodeQt/src/ProjectGlory/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "E:/GitCode/VscodeQt/src/ProjectGlory",
+	"CMAKE_EXECUTABLE" : "D:/Program Files/CMake/bin/cmake.exe",
+	"CMAKE_LIST_FILES" : 
+	[
+		"E:/GitCode/VscodeQt/src/ProjectGlory/CMakeLists.txt",
+		"E:/GitCode/VscodeQt/src/ProjectGlory/build/CMakeFiles/3.23.0-rc3/CMakeSystem.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake",
+		"E:/GitCode/VscodeQt/src/ProjectGlory/build/CMakeFiles/3.23.0-rc3/CMakeCXXCompiler.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/CMakeGenericSystem.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/Platform/WindowsPaths.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/CMakeCXXInformation.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/Compiler/GNU.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows-GNU.cmake",
+		"E:/GitCode/VscodeQt/src/ProjectGlory/build/CMakeFiles/3.23.0-rc3/CMakeRCCompiler.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/CMakeRCInformation.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows-windres.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5/Qt5Config.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core/Qt5CoreMacros.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/CMakeParseArguments.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/CMakeParseArguments.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Sql/Qt5SqlConfigVersion.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Sql/Qt5SqlConfig.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Sql/Qt5Sql_QMYSQLDriverPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Sql/Qt5Sql_QODBCDriverPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Sql/Qt5Sql_QPSQLDriverPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Sql/Qt5Sql_QSQLiteDriverPlugin.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/lib/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"E:/GitCode/VscodeQt/src/ProjectGlory/qrc/MyResource.qrc"
+	],
+	"CMAKE_SOURCE_DIR" : "E:/GitCode/VscodeQt/src/ProjectGlory",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"E:/GitCode/VscodeQt/include/tableview/TableViewBase.h",
+			"Mu",
+			"6GFT6PGQTI/moc_TableViewBase.cpp",
+			null
+		],
+		[
+			"E:/GitCode/VscodeQt/include/tableview/TableViewSql.h",
+			"Mu",
+			"6GFT6PGQTI/moc_TableViewSql.cpp",
+			null
+		],
+		[
+			"E:/GitCode/VscodeQt/src/ProjectGlory/include/TaskMpi.h",
+			"Mu",
+			"6YEA5652QU/moc_TaskMpi.cpp",
+			null
+		],
+		[
+			"E:/GitCode/VscodeQt/src/ProjectGlory/include/TaskTcpClient.h",
+			"Mu",
+			"6YEA5652QU/moc_TaskTcpClient.cpp",
+			null
+		],
+		[
+			"E:/GitCode/VscodeQt/src/ProjectGlory/include/mainwindow.h",
+			"Mu",
+			"6YEA5652QU/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"E:/GitCode/VscodeQt/src/ProjectGlory/protobuf/PublicType.pb.h",
+			"Mu",
+			"QZGCHRIKFQ/moc_PublicType.pb.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "E:/GitCode/VscodeQt/src/ProjectGlory/build/ProjectGlory_autogen/include",
+	"MOC_COMPILATION_FILE" : "E:/GitCode/VscodeQt/src/ProjectGlory/build/ProjectGlory_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_SQL_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"E:/GitCode/VscodeQt/src/ProjectGlory/build",
+		"E:/GitCode/VscodeQt/src/ProjectGlory",
+		"E:/GitCode/VscodeQt/include",
+		"E:/GitCode/VscodeQt/src/ProjectGlory/include",
+		"E:/GitCode/VscodeQt/src/ProjectGlory/protobuf",
+		"E:/GitCode/VscodeQt/src/ProjectGlory/subdevice/include",
+		"E:/GitCode/VscodeQt/src/ProjectGlory/subthreadpool/include",
+		"E:/GitCode/VscodeQt/src/ProjectGlory/subanalyzesqlite/include",
+		"E:/GitCode/VscodeQt/include/quazip",
+		"E:/GitCode/VscodeQt/src/ProjectGlory/subziptool/include",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtWidgets",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtGui",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtANGLE",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtCore",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/mkspecs/win32-g++",
+		"D:/Qt/Qt5.9.9/5.9.9/mingw53_32/include/QtSql",
+		"D:/Qt/Qt5.9.9/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include",
+		"D:/Qt/Qt5.9.9/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed",
+		"D:/Qt/Qt5.9.9/Tools/mingw530_32/i686-w64-mingw32/include",
+		"D:/Qt/Qt5.9.9/Tools/mingw530_32/i686-w64-mingw32/include/c++",
+		"D:/Qt/Qt5.9.9/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32",
+		"D:/Qt/Qt5.9.9/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"D:/Qt/Qt5.9.9/Tools/mingw530_32/bin/g++.exe",
+		"-dM",
+		"-E",
+		"-c",
+		"D:/Program Files/CMake/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "E:/GitCode/VscodeQt/src/ProjectGlory/build/ProjectGlory_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : 
+	[
+		"E:/GitCode/VscodeQt/src/ProjectGlory/build/qrc_MyResource.cpp",
+		"E:/GitCode/VscodeQt/src/ProjectGlory/build/ui_mainwindow.h"
+	],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "E:/GitCode/VscodeQt/src/ProjectGlory/build/CMakeFiles/ProjectGlory_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "D:/Qt/Qt5.9.9/5.9.9/mingw53_32/bin/moc.exe",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 9,
+	"SETTINGS_FILE" : "E:/GitCode/VscodeQt/src/ProjectGlory/build/CMakeFiles/ProjectGlory_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "E:/GitCode/VscodeQt/include/tableview/TableViewBase.cpp", "Mu", null ],
+		[ "E:/GitCode/VscodeQt/include/tableview/TableViewSql.cpp", "Mu", null ],
+		[ "E:/GitCode/VscodeQt/src/ProjectGlory/main.cpp", "Mu", null ],
+		[
+			"E:/GitCode/VscodeQt/src/ProjectGlory/protobuf/PublicType.pb.cc",
+			"Mu",
+			null
+		],
+		[ "E:/GitCode/VscodeQt/src/ProjectGlory/source/TaskMpi.cpp", "Mu", null ],
+		[
+			"E:/GitCode/VscodeQt/src/ProjectGlory/source/TaskTcpClient.cpp",
+			"Mu",
+			null
+		],
+		[
+			"E:/GitCode/VscodeQt/src/ProjectGlory/source/mainwindow.cpp",
+			"Mu",
+			null
+		]
+	],
+	"VERBOSITY" : 0
+}

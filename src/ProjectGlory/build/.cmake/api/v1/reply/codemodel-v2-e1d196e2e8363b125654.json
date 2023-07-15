@@ -1,0 +1,255 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"build" : "subdevice",
+					"jsonFile" : "directory-subdevice-Debug-3afd9c8fa951dc82a06c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "subdevice",
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"build" : "subthreadpool",
+					"jsonFile" : "directory-subthreadpool-Debug-c0aaf17e413122278b06.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "subthreadpool",
+					"targetIndexes" : 
+					[
+						6,
+						7
+					]
+				},
+				{
+					"build" : "subanalyzesqlite",
+					"jsonFile" : "directory-subanalyzesqlite-Debug-3669da876f2f852f0de6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "subanalyzesqlite",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"build" : "subziptool",
+					"jsonFile" : "directory-subziptool-Debug-a0f5408581c0ef04dc8e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.23"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 4,
+					"source" : "subziptool",
+					"targetIndexes" : 
+					[
+						8,
+						9
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ProjectGlory",
+					"targetIndexes" : 
+					[
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "Device",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						3
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "ThreadPool",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						6,
+						7
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "AnalyzeSqlite",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4
+					],
+					"name" : "ZipTool",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 3,
+					"id" : "AnalyzeSqlite::@f26d1da7e8d78d27f935",
+					"jsonFile" : "target-AnalyzeSqlite-Debug-a66d41dd36f50bb73720.json",
+					"name" : "AnalyzeSqlite",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "AnalyzeSqlite_autogen::@f26d1da7e8d78d27f935",
+					"jsonFile" : "target-AnalyzeSqlite_autogen-Debug-7413fb7543561c5b98f7.json",
+					"name" : "AnalyzeSqlite_autogen",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Device::@1720903aa1fe4ed4cd86",
+					"jsonFile" : "target-Device-Debug-5e10e804159257fbe958.json",
+					"name" : "Device",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Device_autogen::@1720903aa1fe4ed4cd86",
+					"jsonFile" : "target-Device_autogen-Debug-3c7768ca1b623ba8c9bb.json",
+					"name" : "Device_autogen",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ProjectGlory::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ProjectGlory-Debug-03a41432bed099425eb7.json",
+					"name" : "ProjectGlory",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ProjectGlory_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ProjectGlory_autogen-Debug-120077dadacc47e94157.json",
+					"name" : "ProjectGlory_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ThreadPool::@a6744c7f43324001f277",
+					"jsonFile" : "target-ThreadPool-Debug-0a0f401eaafc581af918.json",
+					"name" : "ThreadPool",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "ThreadPool_autogen::@a6744c7f43324001f277",
+					"jsonFile" : "target-ThreadPool_autogen-Debug-7a4414e6c7160752c4ec.json",
+					"name" : "ThreadPool_autogen",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ZipTool::@25d88b970db92d35d2ce",
+					"jsonFile" : "target-ZipTool-Debug-2475bcca0ac2640d162b.json",
+					"name" : "ZipTool",
+					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ZipTool_autogen::@25d88b970db92d35d2ce",
+					"jsonFile" : "target-ZipTool_autogen-Debug-15701081f592cf1935a9.json",
+					"name" : "ZipTool_autogen",
+					"projectIndex" : 4
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/GitCode/VscodeQt/src/ProjectGlory/build",
+		"source" : "E:/GitCode/VscodeQt/src/ProjectGlory"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
