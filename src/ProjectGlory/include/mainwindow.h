@@ -22,6 +22,7 @@ QT_END_NAMESPACE
 class MyMainWindow : public QMainWindow
 {
     Q_OBJECT
+    //Q_PROPERTY(QString author READ author WRITE setAuthor NOTIFY authorChanged)
 
 public:
     MyMainWindow(QWidget *parent = nullptr);

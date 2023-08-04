@@ -2,6 +2,9 @@
 #include "./ui_mainwindow.h"
 #include <QFileDialog>
 #include <QMetaProperty>
+#include <QPropertyAnimation>
+#include <QSequentialAnimationGroup>
+#include <QParallelAnimationGroup>
 //#include <QIcon>
 #include "ziptool.h"
 
@@ -343,6 +346,11 @@ void MyMainWindow::initTestCode(){
     num2=5;
     qDebug()<<"num2:"<<num2<< "   num:"<<num;
 
+
+    //QLabel *phoneLabel = new QLabel("&Phone:", this);
+    //phoneLabel->setBuddy(ui->lineEdit_3);
+
+
     // QToolButton
     // QToolButton *pButton=ui->toolButton;
     // pButton->setArrowType(Qt::LeftArrow);
@@ -388,6 +396,30 @@ void MyMainWindow::slotTimeOut(){
 
 // 点击测试按钮事件
  void MyMainWindow::slotTestBtnClicked(){
+   QPushButton *bonnie = new QPushButton("Bonnie");
+    bonnie->show();
 
+    QPushButton *clyde = new QPushButton("Clyde");
+    clyde->show();
+
+    QPropertyAnimation *anim1 = new QPropertyAnimation(bonnie, "geometry");
+    anim1->setDuration(3000);
+    anim1->setStartValue(QRect(0, 0, 100, 30));
+    anim1->setEndValue(QRect(500, 500, 100, 30));
+
+
+
+    QPropertyAnimation *anim2 = new QPropertyAnimation(clyde, "geometry");
+    anim2->setDuration(3000);
+    anim2->setStartValue(QRect(500, 500, 100, 30));
+    anim2->setEndValue(QRect(1000, 500, 100, 30));
+
+    QParallelAnimationGroup *group = new QParallelAnimationGroup;
+    group->addAnimation(anim1);
+    group->addAnimation(anim2);
+
+    group->start();   
     
+   //QObject::dumpObjectTree();
+   //QObject::dumpObjectInfo();
  }
