@@ -15,6 +15,7 @@ MyMainWindow::MyMainWindow(QWidget *parent)
 {
     ui->setupUi(this); 
     setWindowIcon(QIcon(":/resource/resources/ico.jpg"));    
+    initLog();
     initUi();
     //intMoudle();
     initConnect();     
@@ -35,6 +36,11 @@ MyMainWindow::~MyMainWindow()
     }
       
 }
+
+void MyMainWindow::initLog(){
+     initLog4("ProjectGloryLog.conf");
+}
+
 
 void MyMainWindow::initQss(){
     ui->lineEdit_dynamic->setProperty("dynamic_background",true);
